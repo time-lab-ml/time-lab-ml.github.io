@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href="..">
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <meta name="description" content="Workshop site for TIME 2025">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="Conference">
+    <title>Calls | TIME 2025</title>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="assets/sydneyharbour_mask1.webp" alt="Workshop banner">
+        <div class="top-left">
+            <span class="title1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIME 2025  
+            <br>
+            </span><span class="title2">The First International Workshop on Transformative Insights in Multi-faceted Evaluation</span>
+            <img src="assets/logo.png" alt="Workshop Logo" class="logo">
+        </div>
+        <div class="bottom-right">
+            The Web Conference 2025 <br>
+        </div>
+        
+        <div class="bottom-right" style="font-size: 1.5em; bottom: -16px;">
+            <br> Sydney, Australia | 28 April - 2 May  
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a title="Home Page" href=".">Home</a>
+            </td>
+            <td class="navigation">
+                <a class="current" title="Calls" href="submission">Calls</a>
+            </td>
+            <td class="navigation">
+                <a title="Media" href="media">Media</a>
+            </td>
+            <td class="navigation">
+                <a title="Program" href="program">Program</a> 
+            </td>
+            <td class="navigation">
+                <a title="Organizers" href="organizers">Organisation</a>
+            </td>
+            <td class="navigation">
+                <a title="WWW" href="www">WWW25</a>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Fast-Track Submission</h2>
+    <p>
+    The fast-track process enables authors whose papers were not accepted by the main conference to resubmit their work to our workshop after making minor revisions. This presents an opportunity for authors to address the feedback received during the main conference review process and, potentially, have their papers accepted for presentation at our workshop. We invite authors of papers rejected from the WWW'25 main conference to consider resubmitting to the TIME 2025 workshop. We welcome a wide range of topics, including but not limited to surveys, reviews, and evaluation papers.
+    <p>
+        Appendix: authors should cut and paste reviews from the main review process and include a section titled “Improvements,” where they should briefly describe any light revisions made in response to the reviews. Heavy revisions are not allowed.
+    </p>
+    <p>
+        Submission Dates: The submission system will be open from January 20th to 26th (11:59 PM AOE). Final decisions will be made by January 27th.
+    </p>
+    <p>
+        Confidentiality: Reviews will remain confidential, and the review process will be double-blind.
+    </p>
+    <p>
+        Conflict of Interest: If we identify a conflict of interest, we will ask the author to submit elsewhere.
+    </p>
+    <p>
+        Publication: Accepted papers will be published in the ACM Companion proceedings by default. If you wish to opt out, please notify us upon acceptance.
+    </p>
+    <p>
+        To submit your work, kindly use the following <strong><a href="https://openreview.net/group?id=ACM.org/TheWebConf/2025/Workshop/TIME#tab-recent-activity">Submission Link</a></strong>.
+    </p>
+
+    <h2>Important Dates</h2>
+    <div class="important-dates">
+        <div class="date-row">
+            <span class="date-title"><strong>Paper Submission Deadline</strong>: &nbsp;
+                <span class="original-date"> 18 December, 2024</span>
+                <span class="updated-date"> 1 January, 2025 (Extended)</span>
+            <span class="date-countdown" id="countdown-submission"></span>
+        </div>
+        <div class="date-row">
+            <span class="date-title"><strong>Acceptance Notification</strong>: &nbsp;
+                <span class="original-date"> 13 January, 2025</span>
+                <span class="updated-date"> 27 January, 2025 (Extended)</span>
+            <span class="date-countdown" id="countdown-notification"></span>
+        </div>
+        <div class="date-row">
+            <span class="date-title"><strong>Camera-ready Deadline</strong>: &nbsp;
+                <span class="original-date"> 2 February, 2025</span> 
+                <span class="updated-date"> 7 February, 2025 (Extended)</span>
+                
+            <span class="date-countdown" id="countdown-camera-ready"></span>
+        </div>
+        <div class="date-row">
+            <span class="date-title"><strong>Workshop Date</strong>:&nbsp;28 April - 2 May, 2025</span>
+            <span class="date-countdown" id="countdown-workshop"></span>
+        </div>
+    </div>
+    <p>All submission deadlines are end-of-day in the <a href="https://time.is/Anywhere_on_Earth" target="_blank">Anywhere on Earth (AoE)</a> time zone.</p>
+    
+    <script>
+        // Function to update countdown timers
+        function updateCountdown(targetDate, elementId) {
+            const now = new Date();
+            const target = new Date(targetDate);
+            const diff = target - now;
+
+            if (diff > 0) {
+                // Calculate time differences
+                const weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7)); // weeks
+                const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)); // days
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // hours
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); // minutes
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000); // seconds
+
+                // Update the element with the new format
+                document.getElementById(elementId).innerText =
+                    `${weeks} weeks ${formatNumber(days)} days ${formatNumber(hours)}:${formatNumber(minutes)}:${formatNumber(seconds)}`;
+            } else {
+                document.getElementById(elementId).innerText = "Deadline passed.";
+            }
+        }
+
+        // Function to format numbers to ensure two digits (e.g., "04" instead of "4")
+        function formatNumber(num) {
+            return num < 10 ? `0${num}` : num;
+        }
+
+        // Update countdowns every second
+        function startCountdowns() {
+            setInterval(() => {
+                // Adjust dates for AoE (UTC-12)
+                updateCountdown("2025-01-02T11:59:59Z", "countdown-submission");
+                updateCountdown("2025-01-28T11:59:59Z", "countdown-notification");
+                updateCountdown("2025-02-08T11:59:59Z", "countdown-camera-ready");
+                updateCountdown("2025-04-29T11:59:59Z", "countdown-workshop");
+            }, 1000);
+        }
+
+        // Start countdowns on page load
+        window.onload = startCountdowns;
+
+    </script>
+    
+    <h2>Submission Guidelines</h2>
+    <p>
+        Papers for this workshop must be written in English and formatted according to the ACM style, using the ACM template (available for both LaTeX and Word users). Papers should follow the double-column format typical of ACM proceedings. (See <a href="https://www2025.thewebconf.org/short-papers#:~:text=Submission%20Guidelines" target="_blank">Submission Guidelines</a>).
+    </p>
+    <p>
+        Papers may range from 4 to 8 pages in length, with authors permitted to include additional pages exclusively for references and appendices. There is no distinction between "long" and "short" papers; authors can select the length that best suits their work.
+    </p>
+    <p>
+        Paper submissions must conform to the “double-blind” review policy, meaning that authors should omit their names and affiliations from the paper. This ensures a fair and unbiased evaluation of all submissions. All papers will be peer-reviewed by experts in the field. Acceptance will be based on relevance to the workshop, scientific novelty, and technical quality.
+    </p>
+    <p>
+        As part of the submission process, please ensure that your work adheres to ethical standards regarding AI-generated content. Specifically: (i) Authors are required to disclose any use of tools such as ChatGPT or other AI-based systems in the creation of the paper. This includes usage for generating text, analysis, or other content. (ii) If AI tools are used in the paper preparation, authors must ensure that proper attribution is provided and that the tool is used ethically. (iii) AI as authors: AI tools should not be listed as authors. Only human contributors should be credited as authors. Please ensure that all contributors meet the <a href="https://www.acm.org/publications/policies/toc"> ACM Publications Policies</a>.
+    </p>
+    <p>
+        To submit your work, kindly use the following <strong><a href="https://openreview.net/group?id=ACM.org/TheWebConf/2025/Workshop/TIME#tab-recent-activity">Submission Link</a></strong>.
+    </p>
+
+    <h2>Call for Papers</h2>
+    <p>
+        In today’s digital landscape of privacy breaches, misinformation, and algorithmic bias, this workshop fosters cross-domain collaboration, applying successful techniques across fields. By bridging academia and industry, it aims to translate research into actionable solutions for modern web challenges.
+    </p>
+    <p>
+        We invite submissions on a wide range of topics across five themes, including but not limited to the following areas. For more details, please refer to the attached <a href="assets/time25-workshop.pdf">file</a>.
+    </p>
+
+    <table style="border: 2px solid black; border-collapse: collapse; width: 80%;">
+        <tr>
+            <th style="border: 2px solid black; padding-left: 12pt;">Survey Nature</th>
+            <td style="border: 2px solid black; padding-left: 12pt;">
+                Overviews of specific fields.<br>
+                State-of-the-art methods and frameworks.<br>
+                Examples:<br>
+                &nbsp;&nbsp;<strong>Video techniques:</strong> Review advancements in compression and analysis.<br>
+                &nbsp;&nbsp;<strong>Data-driven video analytics:</strong> Machine learning for content analysis.
+            </td>
+        </tr>
+        <tr>
+            <th style="border: 2px solid black; padding-left: 12pt;">Evaluation Focus</th>
+            <td style="border: 2px solid black; padding-left: 12pt;">
+                Critical analysis of solutions.<br>
+                Identify strengths and weaknesses.<br>
+                Examples:<br>
+                &nbsp;&nbsp;<strong>Ethical AI in healthcare:</strong> Ensure transparency and accountability.<br>
+                &nbsp;&nbsp;<strong>Clinical AI privacy:</strong> Review security measures.<br>
+                &nbsp;&nbsp;<strong>Video moderation:</strong> Assess accuracy and ethics.
+            </td>
+        </tr>
+        <tr>
+            <th style="border: 2px solid black; padding-left: 12pt;">Methodologies</th>
+            <td style="border: 2px solid black; padding-left: 12pt;">
+                Critiques and improvements of methods.<br>
+                Examples:<br>
+                &nbsp;&nbsp;<strong>Data annotation:</strong> Best practices for AI performance.<br>
+                &nbsp;&nbsp;<strong>LLMs in healthcare:</strong> Focus on interpretability.<br>
+                &nbsp;&nbsp;<strong>Social media video:</strong> Analyze motion and engagement.
+            </td>
+        </tr>
+        <tr>
+            <th style="border: 2px solid black; padding-left: 12pt;">Cross-Disciplinary</th>
+            <td style="border: 2px solid black; padding-left: 12pt;">
+                Interdisciplinary discussions.<br>
+                Diverse perspectives on challenges.<br>
+                Examples:<br>
+                &nbsp;&nbsp;<strong>Smart cities:</strong> AI for urban improvement.<br>
+                &nbsp;&nbsp;<strong>Online extremism:</strong> Detect and mitigate hate speech.<br>
+                &nbsp;&nbsp;<strong>Human-centric analysis:</strong> Study motion for security and health.
+            </td>
+        </tr>
+        <tr>
+            <th style="border: 2px solid black; padding-left: 12pt;">Emerging Challenges</th>
+            <td style="border: 2px solid black; padding-left: 12pt;">
+                Address pressing issues.<br>
+                Propose future research.<br>
+                Examples:<br>
+                &nbsp;&nbsp;<strong>Misinformation:</strong> Combat false data in crises.<br>
+                &nbsp;&nbsp;<strong>Trust in data:</strong> Ensure quality and reliability.<br>
+                &nbsp;&nbsp;<strong>Video quality:</strong> Improve assessment methods.
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        &copy; TIME 2025 Workshop Coordinators
+    </footer>
+</body>
+</html>
+
