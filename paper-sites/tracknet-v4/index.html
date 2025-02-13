@@ -39,6 +39,9 @@
       <script src="static/js/index.js"></script>
    </head>
    <body>
+      <div style="background-color: #ffcc00; color: black; text-align: center; padding: 10px; font-size: 18px; font-weight: bold;">
+         🚧 Under Construction: This page is currently being updated. 🚧
+      </div>
       <div id="section-popup">
          <div id="popup-header">
             <span style="cursor: move;"><b>Sections</b></span>
@@ -157,7 +160,7 @@
                            <span class="icon">
                            <i class="fas fa-database"></i>
                            </span>
-                           <span>Dataset (coming soon)</span>
+                           <span>Dataset</span>
                            </a>
                            </span>
                         </div>
@@ -173,9 +176,19 @@
          <h2 style="visibility: hidden;">Introduction</h2>
          <div class="container is-max-desktop">
             <div class="hero-body">
-               <div class="image-container" style="text-align: center;">
-                  <img src="./static/images/main_fig.png" alt="Abstract Section Image" style="max-width: 75%; height: auto;">
-               </div>
+
+               <!-- Expandable image -->
+               <div class="image-container">
+                  <img id="expandableImage" src="./static/images/main_fig.png" alt="Abstract Section Image">
+              </div>
+          
+              <!-- Modal -->
+              <div id="imageModal" class="modal">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <img id="modalImage" src="./static/images/main_fig.png" alt="Expanded Image">
+              </div>
+
+
                <p class="subtitle has-text-centered">
                   We propose using learnable motion attention maps to enhance the tracking of high-speed, small objects in video frames. While demonstrated with TrackNetV2, our approach can be seamlessly integrated into any heatmap-based detection and tracking framework.
                   <br>
@@ -204,78 +217,85 @@
       <!-- End paper abstract -->
       <br>
       <hr style="border-top: 2px dashed #209cee; margin-top: 0.1%;">
-      <!-- Youtube video -->
-      <section class="hero is-small is-light">
+
+
+      <!-- Prediction video -->
+      <section id="prediction-videos" class="hero is-small show-in-section-popup">
          <div class="hero-body">
-            <div class="container">
-               <!-- Paper video. -->
-               <h2 class="title is-3">Video Presentation</h2>
-               <div class="columns is-centered has-text-centered">
-                  <div class="column is-four-fifths">
-                     <div class="publication-video">
-                        <!-- Youtube embed code here -->
-                        <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                     </div>
-                  </div>
-               </div>
-            </div>
+             <div class="container">
+                 <h2 class="title is-3 has-text-centered">Prediction Comparisons</h2>
+                 <div class="table-container">
+                     <table class="table is-striped is-fullwidth has-text-centered">
+                         <thead>
+                             <tr>
+                                 <th>Original Video</th>
+                                 <th>TrackNetV2 Prediction</th>
+                                 <th>TrackNetV4 Prediction (Type 1)</th>
+                                 <th>TrackNetV4 Prediction (Type 2)</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <!-- Generate 8 rows dynamically -->
+                             <script>
+                              const videoCount = 8;
+                              const videoTableBody = document.querySelector('#prediction-videos tbody');
+                          
+                              for (let i = 1; i <= videoCount; i++) {
+                                  let isFirstRow = i === 1; // Check if it's the first row
+                                  let row = `
+                                      <tr>
+                                          <td><video ${isFirstRow ? "autoplay" : ""} controls muted loop preload="auto" playsinline width="100%"><source src="static/videos/predictions/original/tnv4_website_prediction_original_video${i}.mp4" type="video/mp4"></video></td>
+                                          <td><video ${isFirstRow ? "autoplay" : ""} controls muted loop preload="auto" width="100%"><source src="static/videos/predictions/tracknet_v2/tnv4_website_prediction_tracknetv2_video${i}.mp4" type="video/mp4"></video></td>
+                                          <td><video ${isFirstRow ? "autoplay" : ""} controls muted loop preload="auto" width="100%"><source src="static/videos/predictions/tracknet_v4_type_1/tnv4_website_prediction_tracknet_v4_type_1_video${i}.mp4" type="video/mp4"></video></td>
+                                          <td><video ${isFirstRow ? "autoplay" : ""} controls muted loop preload="auto" width="100%"><source src="static/videos/predictions/tracknet_v4_type_2/tnv4_website_prediction_tracknet_v4_type_2_video${i}.mp4" type="video/mp4"></video></td>
+                                      </tr>
+                                  `;
+                                  videoTableBody.innerHTML += row;
+                              }
+
+                              // Prevent all other videos from playing automatically
+                              // document.querySelectorAll("#prediction-videos tbody").forEach(video => {
+                              //     video.pause();
+                              // });
+
+                              // Play only the first row's videos
+                              document.querySelectorAll("#prediction-videos tbody tr:first-child").forEach(video => {
+                                  video.play();
+                              });
+                          </script>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
          </div>
-      </section>
-      <!-- End youtube video -->
-      <!-- Video carousel -->
-      <section class="hero is-small">
-         <div class="hero-body">
-            <div class="container">
-               <h2 class="title is-3">Another Carousel</h2>
-               <div id="results-carousel" class="carousel results-carousel">
-                  <div class="item item-video1">
-                     <video poster="" id="video1" autoplay controls muted loop height="100%">
-                        <!-- Your video file here -->
-                        <source src="static/videos/carousel1.mp4"
-                           type="video/mp4">
-                     </video>
-                  </div>
-                  <div class="item item-video2">
-                     <video poster="" id="video2" autoplay controls muted loop height="100%">
-                        <!-- Your video file here -->
-                        <source src="static/videos/carousel2.mp4"
-                           type="video/mp4">
-                     </video>
-                  </div>
-                  <div class="item item-video3">
-                     <video poster="" id="video3" autoplay controls muted loop height="100%">
-                        \
-                        <!-- Your video file here -->
-                        <source src="static/videos/carousel3.mp4"
-                           type="video/mp4">
-                     </video>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- End video carousel -->
+     </section>
+      <!-- End prediction video -->
+      <br>
       <hr style="border-top: 2px dashed #209cee; margin-top: 0.1%;">
+
       <!-- Image carousel -->
       <section id="dataset-overview" class="hero is-small show-in-section-popup">
          <h2 class="title is-3 has-text-centered">Dataset Overview</h2>
-         <div class="buttons-container" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 0px;">
+         <!-- <div class="buttons-container" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 0px;">
             <button id="dataset-statistics-button" class="button is-info active-button">Collapse statistics</button>
             <button id="dataset-images-button" class="button is-info">Click to view sample frames</button>
             <button id="dataset-videos-button" class="button is-info">Click to view sample videos</button>
-         </div>
+         </div> -->
          <div class="hero-body">
 
             <!-- Dataset Statistic Container -->
+            <h2 class="title is-3 has-text-centered" style="font-weight: normal;">Dataset Statistics</h2>
             <div id="dataset-statistic-container" class="container container-stastics" style="display: block;">
                <div class="details" id="datasetDetails">
                   <!-- Dynamic content will be injected here -->
               </div>
             </div>
+            <br><br>
 
             <!-- Sample Images Container -->
-            <div id="sample-images-container" class="container">
-               <div id="dataset-images-carousel" class="carousel results-carousel db-overview" style="display: flex;">
+            <h2 class="title is-3 has-text-centered" style="font-weight: normal;">Sample Images</h2>
+            <div id="sample-images-container" style="display: block;" class="container">
+               <div id="dataset-images-carousel" class="carousel results-carousel db-overview" style="display: block;">
                   <div class="item">
                      <img src="static/images/dataset/ball_blend_court.png" alt="Balls blend with the court"/>
                      <h2 class="subtitle has-text-centered">
@@ -320,14 +340,12 @@
                   </div>
                </div>
             </div>
-
+            <br><br>
 
             <!-- Sample Videos Container -->
-            <div id="sample-videos-container" class="container db-overview">
-
-
-               <div id="results-carousel" class="carousel results-carousel">
-
+            <h2 class="title is-3 has-text-centered" style="font-weight: normal;">Sample Videos</h2>
+            <div id="sample-videos-container" class="container">
+               <div id="results-carousel" class="carousel results-carousel db-overview">
                   <div class="item item-video1">
                      <video poster="" id="video1" autoplay controls muted loop height="100%">
                         <source src="static/videos/dataset/video1.mp4"
@@ -358,16 +376,17 @@
       </section>
       
       <script>
+         // document.getElementById("sample-images-container").style.display = "block";
+         // document.getElementById("sample-videos-container").style.display = "block";
+
          // Sample dataset details
          const dataset = {
-             videos: 120,
-             frames: 35000,
-             annotations: 1500,
-             classes: 10,
-             videos1: 120,
-             frames1: 35000,
-             annotations1: 1500,
-             classes1: 10
+             "Train Videos": 87,
+             "Test Videos": 8,
+             "Frames": "30k+",
+             "Multi-ball Games?": "✅",
+            //  "Doubles Match?": "✅",
+             "Nighttime Match?": "✅"
          };
      
          // Function to load and display dataset details
@@ -399,7 +418,7 @@
          // Load dataset details on page load
          window.onload = loadDatasetDetails;
      </script>
-      <script>
+      <!-- <script>
          // JavaScript to toggle visibility and glowing button styles
          document.getElementById('dataset-statistics-button').addEventListener('click', function () {
             const statisitcsContainer = document.getElementById('dataset-statistic-container');
@@ -493,8 +512,11 @@
                this.classList.remove('active-button');
                this.textContent = 'Click to view Sample Videos';
             }
-         });
-      </script>
+         }); -->
+
+
+
+      </script> 
       <!-- End image carousel -->
       <hr style="border-top: 2px dashed #209cee; margin-top: 0.1%;">
       <!-- Download section -->

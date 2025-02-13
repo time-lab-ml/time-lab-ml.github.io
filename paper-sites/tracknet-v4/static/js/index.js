@@ -15,7 +15,8 @@ $(document).ready(function() {
 
     var carousels = bulmaCarousel.attach('.carousel', options);
     bulmaSlider.attach();
-	
+
+
 	const observer = new MutationObserver(mutations => {
 		mutations.forEach(mutation => {
 			if (mutation.target.style.display !== 'none') {
@@ -28,11 +29,23 @@ $(document).ready(function() {
 	document.querySelectorAll('.carousel, .slider').forEach(el => {
 		observer.observe(el, { attributes: true, attributeFilter: ['style'] });
 	});
-	
 
-	const imagesContainer = document.getElementById('sample-images-container');
-	imagesContainer.style.display = 'none';
-	const videosContainer = document.getElementById('sample-videos-container');
-	videosContainer.style.display = 'none';
+	// const imagesContainer = document.getElementById('sample-images-container');
+	// imagesContainer.style.display = 'none';
+	// const videosContainer = document.getElementById('sample-videos-container');
+	// videosContainer.style.display = 'none';	
 	
+	// Expandable image
+	const img = document.getElementById("expandableImage");
+	const modal = document.getElementById("imageModal");
+	const modalImg = document.getElementById("modalImage");
+
+	img.onclick = function () {
+		modal.style.display = "flex";
+	};
 })
+
+function closeModal() {
+	const modal = document.getElementById("imageModal");
+	modal.style.display = "none";
+}
