@@ -223,7 +223,7 @@
       <section id="prediction-videos" class="hero is-small show-in-section-popup">
          <div class="hero-body">
              <div class="container">
-                 <h2 class="title is-3 has-text-centered">Prediction Comparisons</h2>
+                 <h2 class="title is-3 has-text-centered">Prediction Comparison</h2>
                  <div class="table-container">
                      <table class="table is-striped is-fullwidth has-text-centered">
                          <thead>
@@ -236,7 +236,7 @@
                          </thead>
                          <tbody>
                              <!-- Generate 8 rows dynamically -->
-                             <script>
+                             <!-- <script>
                               const videoCount = 8;
                               const videoTableBody = document.querySelector('#prediction-videos tbody');
                           
@@ -262,7 +262,23 @@
                               document.querySelectorAll("#prediction-videos tbody tr:first-child").forEach(video => {
                                   video.play();
                               });
-                          </script>
+                          </script> -->
+                          <script>
+                           const videoTableBody = document.querySelector('#prediction-videos tbody');
+                           const i = 7; // Only display the 7th row
+                       
+                           let row = `
+                               <tr>
+                                   <td><video autoplay controls muted loop preload="auto" playsinline width="100%"><source src="static/videos/predictions/original/tnv4_website_prediction_original_video${i}.mp4" type="video/mp4"></video></td>
+                                   <td><video autoplay controls muted loop preload="auto" width="100%"><source src="static/videos/predictions/tracknet_v2/tnv4_website_prediction_tracknetv2_video${i}.mp4" type="video/mp4"></video></td>
+                                   <td><video autoplay controls muted loop preload="auto" width="100%"><source src="static/videos/predictions/tracknet_v4_type_1/tnv4_website_prediction_tracknet_v4_type_1_video${i}.mp4" type="video/mp4"></video></td>
+                                   <td><video autoplay controls muted loop preload="auto" width="100%"><source src="static/videos/predictions/tracknet_v4_type_2/tnv4_website_prediction_tracknet_v4_type_2_video${i}.mp4" type="video/mp4"></video></td>
+                               </tr>
+                           `;
+                       
+                           videoTableBody.innerHTML = row; // Only insert the 7th row
+                       </script>
+                       
                          </tbody>
                      </table>
                  </div>
