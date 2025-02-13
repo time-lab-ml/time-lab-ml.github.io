@@ -328,7 +328,7 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2410.01506
-  title: 'LEGO: Learnable Expansion of Graph Operators for Multi-Modal Feature Fusion'
+  title: Learnable Expansion of Graph Operators for Multi-Modal Feature Fusion
   authors:
   - Dexuan Ding
   - Lei Wang
