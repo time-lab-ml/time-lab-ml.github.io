@@ -90,6 +90,18 @@ Our team comprises ANU honors and master’s students who are both passionate an
 
 {%
   include alert.html
+  type="info"
+  content="14/02/2025: TIME Lab has moved to Griffith University and joined the ARC Research Hub, enhancing its industry-focused research and collaboration within the broader Griffith community."
+%}
+
+{%
+  include alert.html
+  type="success"
+  content="28/01/2025: Three papers (two orals and one poster) have been accepted to the Companion Proceedings of the ACM Web Conference (WWW Companion 2025). Congratulations to Xi Ding and Jushang Qiu."
+%}
+
+{%
+  include alert.html
   type="success"
   content="23/01/2025: The TIME Lab, composed of honors and master’s students, achieved significant milestones under Dr. Wang's primary supervision, including three top-tier publications (NeurIPS’24, ICLR’25, ICML’24), an oral presentation at ACML’24 (a respected ML conference in Asia-Pacific), and a paper at ICASSP’25 (a prestigious signal processing venue) from November 20, 2023, to October 25, 2024."
 %}
