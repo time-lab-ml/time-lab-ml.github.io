@@ -12,8 +12,8 @@ Please contact our lab email for any enquires.
 {%
   include button.html
   type="email"
-  text="timelab.cecc@anu.edu.au"
-  link="timelab.cecc@anu.edu.au"
+  text="time.ml@outlook.com"
+  link="time.ml@outlook.com"
 %}
 
 
