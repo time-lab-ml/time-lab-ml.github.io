@@ -161,16 +161,34 @@ Good luck to all candidates! We are proud of your journey and excited to see you
 
 ## Updates
 
+{% capture winner-timelab-medal-2024 %}
+<b>📅 February 20, 2025</b>
+
+#### 🏆 Winner Announcement 🏆
+
+The award committee is pleased to unanimously announce that <b>Qixiang Chen</b> has been awarded the prestigious <b>TIME Lab Medal 2024</b>.
+Additionally, <b>Dexuan Ding</b> has received an <b>Honourable Mention</b> in recognition of outstanding contributions.
+
+Congratulations to both recipients for their exceptional achievements! 🎉
+
+{% endcapture %}
+
 {%
   include alert.html
-  type="info"
-  content="19/1/2024: Peer voting stage has ended."
+  type="success"
+  content=winner-timelab-medal-2024
 %}
 
 {%
   include alert.html
   type="info"
-  content="6/1/2024: Peer voting stage has begun. Eligible members can cast their vote using the following link: https://forms.microsoft.com/r/e2pDD9QjzK ."
+  content="19/1/2025: Peer voting stage has ended."
+%}
+
+{%
+  include alert.html
+  type="info"
+  content="6/1/2025: Peer voting stage has begun. Eligible members can cast their vote using the following link: https://forms.microsoft.com/r/e2pDD9QjzK ."
 %}
 
 {% capture personal-showcase-timelab-medal-2024 %}
