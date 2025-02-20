@@ -84,7 +84,7 @@ Each year, the TIME Lab Medal celebrates students who embody the core values of 
 
 | **Year**      | **Winner(s)**            | **Candidates**                                                                | **Award Date**       | **More Info**       |
 |---------------|--------------------------|--------------------------------------------------------------------------------|-----------------------|---------------------|
-| TIME Lab Medal 2024 | TBD                     | Qixiang Chen, Liyun Zhu, Huilin Chen, Dexuan Ding, Jushang Qiu, and Liwen Luo | TBD                   | [Details](/medal/2024) |
+| TIME Lab Medal 2024 | Qixiang Chen (Winner), Dexuan Ding (Honourable Mention)                     | Qixiang Chen, Liyun Zhu, Huilin Chen, Dexuan Ding, Jushang Qiu, and Liwen Luo | 20th February 2025                   | [Details](/medal/2024) |
 
 
 {% include section.html %}
