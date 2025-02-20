@@ -164,6 +164,12 @@ Good luck to all candidates! We are proud of your journey and excited to see you
 {%
   include alert.html
   type="info"
+  content="19/1/2024: Peer voting stage has ended."
+%}
+
+{%
+  include alert.html
+  type="info"
   content="6/1/2024: Peer voting stage has begun. Eligible members can cast their vote using the following link: https://forms.microsoft.com/r/e2pDD9QjzK ."
 %}
 
