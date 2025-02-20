@@ -73,4 +73,14 @@
   display: none;
 }
 
+.frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  transform: scale(1.5);
+  transform-origin: center;
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=portrait.css.map */
