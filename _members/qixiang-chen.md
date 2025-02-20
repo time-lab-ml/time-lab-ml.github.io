@@ -9,6 +9,7 @@ links:
   home-page: https://q1xiangchen.github.io/
   email: u7227010@anu.edu.au
   google-scholar: qdEDSIMAAAAJ&hl=en&oi=sra
+medal-winner: true
 ---
 
 Qixiang Chen is a big fan on motions, prompts and attentions, and how they shape dynamics for human vision systems, as a part of TIME Lab.
