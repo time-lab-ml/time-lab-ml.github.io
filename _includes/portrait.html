@@ -22,13 +22,23 @@
       {% include icon.html icon=type.icon %}
     {% endif %}
 
-    <img
-      src="{{ member.image | relative_url }}"
-      class="portrait-image"
-      alt="member portrait"
-      loading="lazy"
-      {% include fallback.html %}
-    >
+    <div class="portrait-frame">
+      <img
+        src="{{ member.image | relative_url }}"
+        class="portrait-image"
+        alt="member portrait"
+        loading="lazy"
+        {% include fallback.html %}
+      >
+
+      {% if member.medal-winner %}
+        <img
+          src="/images/medal/medal_winner.png"
+          alt="TIME Lab Medal Winner"
+          class="frame-overlay"
+        >
+      {% endif %}
+    </div>
 
     {% if member.name %}
       <span class="portrait-name">
