@@ -182,7 +182,7 @@ Congratulations to both recipients for their exceptional achievements! 🎉
 {%
   include alert.html
   type="info"
-  content="20/2/2025: We extend our heartfelt gratitude to the most dedicated award committee members, including Bhavesh Jaisinghani (Autodesk) and Saurabh Aggarwal (Google), for their invaluable efforts in ensuring a fair and thorough selection process. Your commitment to excellence is deeply appreciated!"
+  content="20/2/2025: We extend our heartfelt gratitude to the most dedicated award committee members, including Bhavesh Jaisinghani (Autodesk) and Saurabh Aggarwal (Autodesk), for their invaluable efforts in ensuring a fair and thorough selection process. Your commitment to excellence is deeply appreciated!"
 %}
 
 {%
