@@ -12,8 +12,8 @@ Please contact our lab email for any enquires.
 {%
   include button.html
   type="email"
-  text="time.ml@outlook.com"
-  link="time.ml@outlook.com"
+  text="time.lab@griffith.edu.au"
+  link="time.lab@griffith.edu.au"
 %}
 
 
