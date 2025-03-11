@@ -4,6 +4,7 @@ image: images/team/xi-ding-photo.png
 role: arc-hub
 affiliation: ANU & ARC Hub & Griffith
 description: Master's Student
+
 links:
   home-page: https://darcyddx.github.io/
   email: xi.ding1@anu.edu.au
