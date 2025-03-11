@@ -7,7 +7,7 @@ description: Master's Student
 links:
   home-page: https://darcyddx.github.io/
   email: xi.ding1@anu.edu.au
-  linkedin: xi-ding-23a814296
+  linkedin: xi-ding-0a5496354
 ---
 
 Xi Ding is a master's student in Machine Learning at ANU, with a passionate focus on Transparent and Interpretable AI, particularly in the domain of video analysis. His academic journey is driven by a compelling interest in understanding and developing AI systems that can explain their decision-making processes, bridging the gap between complex algorithmic operations and human comprehension.
