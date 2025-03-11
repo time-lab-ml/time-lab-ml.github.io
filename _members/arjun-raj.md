@@ -2,7 +2,7 @@
 name: Arjun Raj
 image: images/team/ar4152.jpg
 role: undergrad
-affiliation: Australian National University
+affiliation: ANU & ARC Hub & Griffith
 description: Undergraduate Student
 links:
   home-page: https://arjunraj.com/
