@@ -7,21 +7,26 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Our Team
 
-
 {% include list.html data="members" component="portrait" filters="role: pi" %}
-{% include list.html data="members" component="portrait" filters="role: ^(?!pi$)(?!alum$)(?!ment$)(?!ra-custom$)" %}
+{% include list.html data="members" component="portrait" filters="role: ^(?!pi$)(?!alum$)(?!ment$)(?!ra-custom$)(?!arc-hub$)" %}
 
 {% include section.html %}
 
-# {% include icon.html icon="fa-solid fa-users" %}Mentoring Students
+# {% include icon.html icon="fa-solid fa-users" %}ARC Hub Scholar at TIME
 
-{% include list.html data="members" component="portrait" filters="role: ment" %}
+{% include list.html data="members" component="portrait" filters="role: arc-hub" %}
 
 {% include section.html %}
 
 # {% include icon.html icon="fa-solid fa-users" %}Research Assistants
 
 {% include list.html data="members" component="portrait" filters="role: ra-custom" %}
+
+{% include section.html %}
+
+# {% include icon.html icon="fa-solid fa-users" %}Mentoring Students
+
+{% include list.html data="members" component="portrait" filters="role: ment" %}
 
 {% include section.html %}
 

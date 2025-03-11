@@ -1,7 +1,7 @@
 ---
 name: Xi Ding
 image: images/team/xi-ding-photo.png
-role: ra-custom
+role: arc-hub
 affiliation: Australian National University
 description: Master's Student
 links:
