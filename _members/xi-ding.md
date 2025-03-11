@@ -7,6 +7,7 @@ description: Master's Student
 links:
   home-page: https://darcyddx.github.io/
   email: xi.ding1@anu.edu.au
+  orcid: 0009-0005-5309-4340
   linkedin: xi-ding-0a5496354
 ---
 
