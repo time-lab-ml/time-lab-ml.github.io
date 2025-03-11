@@ -2,7 +2,7 @@
 name: Dr. Lei Wang
 image: images/team/lei-wang-photo-new.jpg
 role: pi
-affiliation: ANU & Data61/CSIRO
+affiliation: ARC hub & Griffith & D61
 description: Lab Lead
 aliases:
   - L Wang
