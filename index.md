@@ -87,6 +87,7 @@ Our team comprises ANU honors and master’s students who are both passionate an
 {% include section.html %}
 
 ## News Updates
+
 {%
   include alert.html
   type="info"
