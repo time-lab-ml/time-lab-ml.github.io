@@ -87,6 +87,11 @@ Our team comprises ANU honors and master’s students who are both passionate an
 {% include section.html %}
 
 ## News Updates
+{%
+  include alert.html
+  type="info"
+  content="02/03/2025: “TIME Space” project has been officially included in the 2025 ANU TechLauncher program. Xi Ding and Xiuyuan (Jack) Yuan will serve as the delegated clients at TIME Lab on behalf of Lei Wang."
+%}
 
 {%
   include alert.html
