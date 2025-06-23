@@ -347,12 +347,11 @@
   title: 'SignLLM: Sign Language Production Large Language Models'
   authors:
   - Sen Fang
+  - Chen Chen
   - Lei Wang
   - Ce Zheng
   - Chunyu Sui
-  - Mingyu Zhao
   - Yapeng Tian
-  - Chen Chen
   publisher: arXiv
   date: '2024-05-03'
   link: https://arxiv.org/abs/2405.10718
