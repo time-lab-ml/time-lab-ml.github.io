@@ -59,13 +59,13 @@
     },
     {
       "name": "Zhicheng Zhang",
-      "image": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=ZBViSTgAAAAJ&citpid=4",
+      "image": "ssets/images/zhicheng.png",
       "institution": "UNSW",
       "link": "https://scholar.google.com/citations?user=ZBViSTgAAAAJ"
     },
     {
       "name": "Zicheng Pan",
-      "image": "https://raw.githubusercontent.com/zichengpan/zichengpan.github.io/main/assets/img/profile.jpg",
+      "image": "assets/images/zicheng.jpg",
       "institution": "Griffith University",
       "link": "https://zichengpan.github.io/"
     }

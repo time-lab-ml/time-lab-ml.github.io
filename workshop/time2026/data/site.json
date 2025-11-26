@@ -9,5 +9,9 @@
   "websites": {
     "workshop": "https://time.griffith.edu.au",
     "conference": "https://www2026.thewebconf.org"
+  },
+  "social": {
+    "linkedin": "https://au.linkedin.com/company/time-lab-ml",
+    "twitter": ""
   }
 }

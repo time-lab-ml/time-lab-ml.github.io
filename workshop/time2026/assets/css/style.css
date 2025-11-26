@@ -942,6 +942,22 @@ strong {
   margin-top: var(--spacing-xl);
 }
 
+#organization .content-card .button {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+#organization .content-card .button:hover {
+  color: var(--color-primary-dark);
+}
+
 /* ===== Footer ===== */
 .footer {
   background: linear-gradient(135deg, var(--color-text-primary) 0%, #2a2a2a 100%);

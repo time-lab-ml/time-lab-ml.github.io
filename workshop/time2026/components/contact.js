@@ -2,11 +2,11 @@
 export async function renderContact(containerId, options = {}) {
   const { isSubpage = false } = options;
   const basePath = isSubpage ? '../' : '';
-  
+
   try {
     const response = await fetch(`${basePath}data/site.json`);
     const site = await response.json();
-    
+
     const html = `
       <div class="contact-grid">
         <div class="contact-card">
@@ -20,29 +20,18 @@ export async function renderContact(containerId, options = {}) {
         </div>
         <div class="contact-card">
           <div class="contact-icon">🌐</div>
-          <h4>Websites</h4>
-          <p class="contact-info">
-            <strong>Workshop Website:</strong><br>
-            <a href="${site.websites.workshop}" target="_blank">${site.websites.workshop.replace('https://', '')}</a>
-          </p>
-          <p class="contact-info">
-            <strong>WWW 2026 Conference:</strong><br>
-            <a href="${site.websites.conference}" target="_blank">${site.websites.conference.replace('https://', '')}</a>
-          </p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">📱</div>
           <h4>More Information</h4>
-          <p>Visit our official website and resources:</p>
+          <p>Connect with us through our official channels:</p>
           <div class="social-links">
             <a href="${site.websites.workshop}" target="_blank" class="social-link">Official Website</a>
-            <a href="#" class="social-link">GitHub</a>
+            ${site.social.linkedin ? `<a href="${site.social.linkedin}" target="_blank" class="social-link">LinkedIn</a>` : ''}
+            ${site.social.twitter ? `<a href="${site.social.twitter}" target="_blank" class="social-link">Twitter/X</a>` : ''}
           </div>
         </div>
       </div>`;
-    
+
     document.getElementById(containerId).innerHTML = html;
-    
+
   } catch (error) {
     console.error('Error loading contact:', error);
   }
