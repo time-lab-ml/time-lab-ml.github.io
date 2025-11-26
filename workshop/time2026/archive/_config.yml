@@ -1,0 +1,31 @@
+title: TIME 2026 - The Second International Workshop on Transformative Insights in Multi-faceted Evaluation
+description: The TIME 2026 workshop, organized as part of The Web Conference 2026 (WWW 2026)
+url: ""
+baseurl: "/TIME2026-WWW"
+
+# Build settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude files
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+  - .bundle
+
+# SCSS configuration
+sass:
+  style: compressed
+  sass_dir: assets/css
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organisation – TIME 2026 Workshop</title>
+  <meta name="description" content="Organisation page for the TIME 2026 workshop" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <div id="hero-container"></div>
+
+  <section id="organization" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Organisation</h2>
+        <div class="title-underline"></div>
+      </div>
+      <p class="lead">The TIME 2026 workshop is organized by an international committee bringing together expertise across web science, algorithmic fairness, security, ethics, graph analysis, and data-driven evaluation. Below you will find the full list of organisers.</p>
+      <div id="organizers-container"></div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script type="module">
+    import { initSubpage, renderOrganizers } from '../components/app.js';
+    // Provide a hero banner specific to this page
+    await initSubpage({ title: 'Organisation' });
+    await renderOrganizers('organizers-container', { isSubpage: true });
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

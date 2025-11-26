@@ -1,0 +1,29 @@
+# Jekyll
+_site/
+.jekyll-metadata
+.jekyll-cache
+
+# Ruby/Bundler
+.bundle/
+vendor/bundle/
+*.gem
+Gemfile.lock
+
+# IDE & Tools
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Todo & Logs
+todo.txt
+*.todo
+
+# System
+Thumbs.db
+
+# Dependencies
+node_modules/

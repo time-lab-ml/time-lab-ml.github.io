@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <img src="{{ 'https://time.griffith.edu.au/images/logo.gif' | relative_url }}" alt="TIME Lab Logo">
+        <span class="brand-text">TIME 2026</span>
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="nav-item"><a href="{{ '/important-dates' | relative_url }}">Important Dates</a></li>
+        <li class="nav-item"><a href="{{ '/calls' | relative_url }}">Calls</a></li>
+        <li class="nav-item"><a href="{{ '/media' | relative_url }}">Media</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 TIME Workshop. All rights reserved.</p>
+      <p><strong>TIME Lab</strong> | Griffith University</p>
+      <p>Contact: <a href="mailto:time.workshop@griffith.edu.au">time.workshop@griffith.edu.au</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

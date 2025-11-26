@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "🎯",
+    "title": "Responsible and Cross-Domain Evaluation",
+    "description": "Frameworks and methodologies for assessing fairness, robustness, transparency, and trustworthy multimodal systems"
+  },
+  {
+    "icon": "📊",
+    "title": "Survey Nature",
+    "description": "Comprehensive overviews of specific fields, methodologies, and findings; identifying trends and knowledge gaps"
+  },
+  {
+    "icon": "🔍",
+    "title": "Evaluation Focus",
+    "description": "Critical evaluations of existing solutions in healthcare AI, security, privacy, and content moderation"
+  },
+  {
+    "icon": "⚙️",
+    "title": "Methodologies Review",
+    "description": "Critiques and improvements to data annotation standards, LLM interpretability, and video analysis methods"
+  },
+  {
+    "icon": "🤝",
+    "title": "Cross-Disciplinary Insights",
+    "description": "Interdisciplinary discussions on smart cities, online extremism, and human-centric analytics"
+  },
+  {
+    "icon": "🚀",
+    "title": "Emerging Challenges",
+    "description": "Addressing misinformation, data quality and trust, and video quality assessment"
+  }
+]
