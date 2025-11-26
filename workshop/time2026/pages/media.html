@@ -50,20 +50,7 @@
           </div>
         </div>
 
-        <div class="social-media-card">
-          <h3>Follow Us on Social Media</h3>
-          <p>Stay connected through our social media channels for real-time updates and community engagement.</p>
-          <div class="social-links-grid">
-            <a href="#" class="social-card">
-              <div class="social-icon">🐦</div>
-              <div class="social-name">Twitter/X</div>
-            </a>
-            <a href="#" class="social-card">
-              <div class="social-icon">💻</div>
-              <div class="social-name">GitHub</div>
-            </a>
-          </div>
-        </div>
+        <div id="contact-container-media"></div>
       </div>
     </div>
   </section>
@@ -74,14 +61,18 @@
   <script type="module">
     import { initSubpage } from '../components/app.js';
     import { loadAnnouncements } from '../components/announcements.js';
-    
+    import { renderContact } from '../components/contact.js';
+
     initSubpage({
       title: 'Media & Announcements',
       subtitle: 'Latest News and Updates'
     });
-    
+
     // Load announcements from JSON data
     loadAnnouncements('announcements-list', '../data/announcements.json');
+
+    // Load contact component for social media section
+    renderContact('contact-container-media', { isSubpage: true });
   </script>
   
   <script src="../assets/js/main.js"></script>

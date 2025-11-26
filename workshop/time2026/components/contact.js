@@ -20,10 +20,18 @@ export async function renderContact(containerId, options = {}) {
         </div>
         <div class="contact-card">
           <div class="contact-icon">🌐</div>
-          <h4>More Information</h4>
-          <p>Connect with us through our official channels:</p>
+          <h4>Websites</h4>
+          <p>Visit our official channels:</p>
           <div class="social-links">
             <a href="${site.websites.workshop}" target="_blank" class="social-link">Official Website</a>
+            <a href="${site.websites.conference}" target="_blank" class="social-link">WWW 2026</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media:</p>
+          <div class="social-links">
             ${site.social.linkedin ? `<a href="${site.social.linkedin}" target="_blank" class="social-link">LinkedIn</a>` : ''}
             ${site.social.twitter ? `<a href="${site.social.twitter}" target="_blank" class="social-link">Twitter/X</a>` : ''}
           </div>
