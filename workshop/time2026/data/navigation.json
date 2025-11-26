@@ -1,0 +1,8 @@
+[
+  { "label": "Home", "href": "#home", "pageHref": "../index.html#home" },
+  { "label": "Calls", "href": "pages/calls.html", "pageHref": "calls.html" },
+  { "label": "Media", "href": "pages/media.html", "pageHref": "media.html" },
+  { "label": "Program", "href": "pages/program.html", "pageHref": "program.html" },
+  { "label": "Organisation", "href": "pages/organization.html", "pageHref": "organization.html" },
+  { "label": "WWW26", "href": "pages/www.html", "pageHref": "www.html" }
+]

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media & Announcements - TIME 2026 Workshop</title>
+  <meta name="description" content="Latest news and updates from TIME 2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Dynamic Components -->
+  <div id="navbar-container"></div>
+  <div id="hero-container"></div>
+
+  <!-- Announcements Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Announcements</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <!-- Announcements loaded dynamically from JSON -->
+      <div class="announcements-list" id="announcements-list">
+        <!-- Loading state -->
+        <div class="loading-state">Loading announcements...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Stay Connected</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="newsletter-section">
+        <div class="newsletter-card">
+          <div class="newsletter-icon">📧</div>
+          <h3>Subscribe to Updates</h3>
+          <p>Get the latest news, announcements, and important deadlines delivered to your inbox.</p>
+          <div class="newsletter-form">
+            <p>For updates, please contact us at:</p>
+            <a href="mailto:time.lab@griffith.edu.au" class="btn btn-primary">time.lab@griffith.edu.au</a>
+          </div>
+        </div>
+
+        <div class="social-media-card">
+          <h3>Follow Us on Social Media</h3>
+          <p>Stay connected through our social media channels for real-time updates and community engagement.</p>
+          <div class="social-links-grid">
+            <a href="#" class="social-card">
+              <div class="social-icon">🐦</div>
+              <div class="social-name">Twitter/X</div>
+            </a>
+            <a href="#" class="social-card">
+              <div class="social-icon">💻</div>
+              <div class="social-name">GitHub</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <!-- Module Script -->
+  <script type="module">
+    import { initSubpage } from '../components/app.js';
+    import { loadAnnouncements } from '../components/announcements.js';
+    
+    initSubpage({
+      title: 'Media & Announcements',
+      subtitle: 'Latest News and Updates'
+    });
+    
+    // Load announcements from JSON data
+    loadAnnouncements('announcements-list', '../data/announcements.json');
+  </script>
+  
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

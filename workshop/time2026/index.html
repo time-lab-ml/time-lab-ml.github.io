@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIME 2026 Workshop</title>
+  <meta name="description" content="The Second International Workshop on Transformative Insights in Multi-faceted Evaluation">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Dynamic Components -->
+  <div id="navbar-container"></div>
+  <div id="hero-container"></div>
+
+  <!-- Overview Section -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Overview</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="content-card">
+        <p class="lead">
+          The TIME 2026 workshop, organized as part of The Web Conference 2026 (WWW 2026), represents a pivotal initiative in advancing cross-domain knowledge exchange and methodological innovation in contemporary web technologies.
+        </p>
+        <p>
+          The initiative addresses critical digital ecosystem challenges including privacy, algorithmic bias, and ethical web practices. It serves as a collaboration platform for academics and industry experts focusing on social network analysis, graph algorithms, web mining, security, and ethics.
+        </p>
+        <p>
+          The workshop emphasizes actionable solutions and cross-disciplinary insights aligned with WWW 2026's objectives, bridging theoretical research and real-world applications.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers Section -->
+  <section id="speakers" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Invited Speakers</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="speakers-grid">
+        <div class="speaker-card">
+          <div class="speaker-content">
+            <h3 class="speaker-name">TBD</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organization Section (moved to its own page) -->
+  <section id="organization" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Organization</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="content-card">
+        <p>The full list of workshop organisers has moved to its own page.</p>
+        <p><a class="button" href="pages/organization.html">View Organisation Page</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact & Information</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div id="contact-container"></div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <!-- Module Script -->
+  <script type="module">
+    import { initHomePage } from './components/app.js';
+    initHomePage();
+  </script>
+  
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
