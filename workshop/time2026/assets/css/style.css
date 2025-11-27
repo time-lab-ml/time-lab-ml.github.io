@@ -49,6 +49,8 @@
   /* Transitions */
   --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Component Dimensions */
+  --navbar-height: 80px;
 }
 
 /* ===== Reset & Base Styles ===== */
@@ -69,6 +71,8 @@ body {
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
   overflow-x: hidden;
+  /* Reserve space for fixed navbar */
+  padding-top: var(--navbar-height);
 }
 
 /* ===== Typography ===== */
@@ -137,10 +141,32 @@ strong {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-sm);
-  position: sticky;
+  position: fixed; /* Always fixed at top */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   transition: var(--transition-base);
+}
+
+/* Navbar compact state when scrolled */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar.scrolled .nav-content {
+  height: 64px;
+}
+
+.navbar.scrolled .nav-brand img {
+  height: 40px;
+  transition: var(--transition-base);
+}
+
+.navbar.scrolled .brand-text {
+  font-size: 1.3rem;
 }
 
 .nav-content {
@@ -267,6 +293,17 @@ strong {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-base);
+  }
+
+  /* Mobile compact state */
+  .navbar.scrolled .nav-content {
+    height: 60px;
+  }
+  .navbar.scrolled .nav-brand img {
+    height: 36px;
+  }
+  .navbar.scrolled .brand-text {
+    font-size: 1.1rem;
   }
   
   .nav-menu.active {
@@ -942,22 +979,6 @@ strong {
   margin-top: var(--spacing-xl);
 }
 
-#organization .content-card .button {
-  display: inline-block;
-  padding: 0;
-  background: none;
-  color: var(--color-primary);
-  font-size: 1.5rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition-base);
-}
-
-#organization .content-card .button:hover {
-  color: var(--color-primary-dark);
-}
-
 /* ===== Footer ===== */
 .footer {
   background: linear-gradient(135deg, var(--color-text-primary) 0%, #2a2a2a 100%);
@@ -987,40 +1008,49 @@ strong {
 
 /* ===== Page-Specific Styles ===== */
 
-/* Submission Requirements */
+/* Submission Requirements - Horizontal Layout */
 .requirements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
 }
 
 .requirement-item {
-  text-align: center;
-  padding: var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
   background: var(--color-bg-secondary);
   border-radius: var(--radius-md);
   transition: var(--transition-base);
+  text-align: left;
 }
 
 .requirement-item:hover {
   background: var(--color-bg-white);
   box-shadow: var(--shadow-sm);
-  transform: translateY(-2px);
+  transform: translateX(4px);
 }
 
 .requirement-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 50px;
+  text-align: center;
 }
 
 .requirement-item h4 {
   font-size: 1.1rem;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
 }
 
 .requirement-item p {
   font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.requirement-item p:last-child {
   margin-bottom: 0;
 }
 
@@ -1312,19 +1342,6 @@ strong {
   box-shadow: var(--shadow-md);
 }
 
-.announcement-badge {
-  position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-sm);
-}
-
 .announcement-header {
   display: flex;
   justify-content: space-between;
@@ -1368,6 +1385,16 @@ strong {
   transform: translateX(4px);
 }
 
+.announcement-signature {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
 @media (max-width: 768px) {
   .announcement-header {
     flex-direction: column;
@@ -1376,12 +1403,6 @@ strong {
   
   .announcement-date {
     white-space: normal;
-  }
-  
-  .announcement-badge {
-    position: static;
-    display: inline-block;
-    margin-bottom: var(--spacing-sm);
   }
 }
 
