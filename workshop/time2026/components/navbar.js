@@ -45,6 +45,7 @@ export async function renderNavbar(containerId, options = {}) {
     
     // Initialize hamburger menu
     initHamburgerMenu();
+    initNavbarScrollEffect();
     
   } catch (error) {
     console.error('Error loading navbar:', error);
@@ -69,4 +70,20 @@ function initHamburgerMenu() {
       });
     });
   }
+}
+
+function initNavbarScrollEffect() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  const applyState = () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', applyState, { passive: true });
+  applyState(); // initial state
 }

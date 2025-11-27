@@ -7,9 +7,6 @@
  */
 function renderAnnouncementCard(announcement) {
   const featuredClass = announcement.featured ? ' featured' : '';
-  const badgeHtml = announcement.badge 
-    ? `<div class="announcement-badge">${announcement.badge}</div>` 
-    : '';
   
   // Render content paragraphs
   const contentHtml = announcement.content
@@ -28,9 +25,13 @@ function renderAnnouncementCard(announcement) {
     linkHtml = `<a href="${announcement.link.url}" class="announcement-link"${targetAttr}>${announcement.link.text}</a>`;
   }
 
+  // Render signature if exists (format: [S1], [S2], etc.)
+  const signatureHtml = announcement.signature 
+    ? `<div class="announcement-signature">${announcement.signature}</div>` 
+    : '';
+
   return `
         <article class="announcement-card${featuredClass}">
-          ${badgeHtml}
           <div class="announcement-header">
             <h3>${announcement.title}</h3>
             <span class="announcement-date">${announcement.date}</span>
@@ -39,6 +40,7 @@ function renderAnnouncementCard(announcement) {
             ${contentHtml}
             ${listHtml}
             ${linkHtml}
+            ${signatureHtml}
           </div>
         </article>`;
 }

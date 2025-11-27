@@ -8,10 +8,8 @@
   "logo": "https://time.griffith.edu.au/images/logo.gif",
   "websites": {
     "workshop": "https://time.griffith.edu.au",
-    "conference": "https://www2026.thewebconf.org"
-  },
-  "social": {
-    "linkedin": "https://www.linkedin.com/company/time-lab-ml/",
-    "twitter": ""
+    "conference": "https://www2026.thewebconf.org",
+    "github": "https://github.com/time-lab-ml",
+    "linkedin": "https://www.linkedin.com/company/time-lab-ml/"
   }
 }

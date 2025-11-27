@@ -74,12 +74,12 @@
   <script type="module">
     import { initSubpage } from '../components/app.js';
     import { loadAnnouncements } from '../components/announcements.js';
-
+    
     initSubpage({
       title: 'Media & Announcements',
       subtitle: 'Latest News and Updates'
     });
-
+    
     // Load announcements from JSON data
     loadAnnouncements('announcements-list', '../data/announcements.json');
   </script>

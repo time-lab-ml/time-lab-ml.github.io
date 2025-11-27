@@ -5,6 +5,7 @@
       "date": "November 22, 2025",
       "featured": true,
       "badge": "Latest",
+      "signature": "[TIME 2026 Organizers]",
       "content": [
         "The call for papers for TIME 2026 is now open. We invite researchers and practitioners to submit original, unpublished research papers addressing contemporary challenges in web technologies, responsible AI, and evaluation methodologies.",
         "<strong>Submission Deadline:</strong> December 18, 2025 (AoE)"
@@ -17,6 +18,7 @@
     {
       "title": "Workshop Confirmed at WWW 2026",
       "date": "November 20, 2025",
+      "signature": "[TIME 2026 Coordinators]",
       "content": [
         "TIME 2026 has been officially confirmed as a workshop at The Web Conference 2026 in Dubai, United Arab Emirates. The workshop will be held on April 13-14, 2026.",
         "This marks the second edition of the TIME workshop, building on the successful foundation established at WWW 2025 in Sydney."
@@ -25,6 +27,7 @@
     {
       "title": "TIME 2025 Workshop Archive",
       "date": "Previous Edition",
+      "signature": "[TIME 2026 Coordinators]",
       "content": [
         "The first TIME workshop was held in Sydney during The Web Conference 2025. Access materials from the previous edition at the TIME 2025 archive.",
         "The workshop featured presentations on cutting-edge research in multi-faceted evaluation, trustworthy AI, and cross-domain methodologies."
@@ -38,6 +41,7 @@
     {
         "title": "Workshop Coordinators Designation",
         "date": "November 15, 2025",
+        "signature": "[TIME 2026 Coordinators]",
         "content": [
           "We are excited to announce the designation of the workshop coordinators for TIME 2026. The coordinators will oversee the organization and execution of the workshop, ensuring a smooth and engaging experience for all participants."
         ],
@@ -49,6 +53,7 @@
     {
       "title": "Program Committee Assembled",
       "date": "November 10, 2025",
+      "signature": "[TIME 2026 Coordinators]",
       "content": [
         "We are pleased to announce that our distinguished Program Committee has been assembled, bringing together experts from leading institutions worldwide to ensure high-quality peer reviews for all submissions."
       ],

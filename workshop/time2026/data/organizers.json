@@ -16,7 +16,7 @@
     },
     {
       "name": "Prof. Tom Gedeon",
-      "image": "https://dxybwjmxea64j.cloudfront.net/tom-gedeon-5e48a1fd.jpg?ver=0.6675092052777616",
+      "image": "https://time.griffith.edu.au/workshop/time2025/assets/gedeon.jpg",
       "institution": "Curtin University",
       "bio": "Specialization in evaluation methodologies and benchmarking.",
       "link": "https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/"
@@ -59,13 +59,13 @@
     },
     {
       "name": "Zhicheng Zhang",
-      "image": "assets/images/zhicheng.png",
+      "image": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=ZBViSTgAAAAJ&citpid=4",
       "institution": "UNSW",
       "link": "https://scholar.google.com/citations?user=ZBViSTgAAAAJ"
     },
     {
       "name": "Zicheng Pan",
-      "image": "assets/images/zicheng.jpg",
+      "image": "https://raw.githubusercontent.com/zichengpan/zichengpan.github.io/main/assets/img/profile.jpg",
       "institution": "Griffith University",
       "link": "https://zichengpan.github.io/"
     }
