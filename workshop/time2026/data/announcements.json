@@ -1,6 +1,22 @@
 {
   "announcements": [
     {
+      "title": "Fast-track Submission Opens Jan 13, 2026",
+      "date": "December 23, 2025",
+      "featured": true,
+      "badge": "New",
+      "signature": "[TIME 2026 Organizers]",
+      "content": [
+        "TIME 2026 will open a fast-track submission window starting <strong>January 13, 2026</strong>. This is intended to attract high-quality work that benefits from workshop discussion.",
+        "We welcome submissions of strong papers that were not accepted to the WWW 2026 main conference (and similar venues), but are excellent fits for TIME.",
+        "Topics are <strong>not limited</strong> to the examples in the Call for Papers—submissions aligned with the broader TIME mission are encouraged."
+      ],
+      "link": {
+        "text": "Fast-track details →",
+        "url": "calls.html#fast-track"
+      }
+    },
+    {
       "title": "Call for Papers Now Open",
       "date": "November 22, 2025",
       "featured": true,
@@ -8,7 +24,7 @@
       "signature": "[TIME 2026 Organizers]",
       "content": [
         "The call for papers for TIME 2026 is now open. We invite researchers and practitioners to submit original, unpublished research papers addressing contemporary challenges in web technologies, responsible AI, and evaluation methodologies.",
-        "<strong>Submission Deadline:</strong> December 18, 2025 (AoE)"
+        "<strong>Submission Deadline:</strong> December 24, 2025 (AoE)"
       ],
       "link": {
         "text": "View Call for Papers →",
