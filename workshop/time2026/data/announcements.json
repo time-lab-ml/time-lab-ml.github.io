@@ -1,10 +1,21 @@
 {
   "announcements": [
     {
+      "title": "Review Process & Preliminary Reviews",
+      "date": "January 16, 2026",
+      "featured": true,
+      "badge": "New",
+      "signature": "[TIME 2026 Program Chairs]",
+      "content": [
+        "All submissions underwent a rigorous multi-stage review process. Each paper was first screened by the Program Chairs for formatting compliance and completeness, followed by automated checks for AI-generated content and potential reference hallucinations. Submissions passing these checks were then reviewed by at least three expert reviewers.",
+        "Preliminary review results, including reviewer comments, AI checking reports, and Program Chair feedback on formatting, were released to authors to allow for responses/rebuttals and revisions. This stage enabled authors to address major concerns and improve the overall quality of their papers.",
+        "Revised submissions were subsequently evaluated by Area Chairs, who carefully considered the reviewer feedback, numerical ratings, paper strengths and contributions, relevance to the workshop scope, and the authors’ responses. Final decisions were made by the Program Chairs based on all reviewer and Area Chair recommendations, as well as the overall quality and fit of each paper."
+      ]
+    },
+    {
       "title": "Fast-track Submission Opens Jan 13, 2026",
       "date": "December 23, 2025",
       "featured": true,
-      "badge": "New",
       "signature": "[TIME 2026 Organizers]",
       "content": [
         "TIME 2026 will open a fast-track submission window starting <strong>January 13, 2026</strong>. This is intended to attract high-quality work that benefits from workshop discussion.",
@@ -20,7 +31,6 @@
       "title": "Call for Papers Now Open",
       "date": "November 22, 2025",
       "featured": true,
-      "badge": "Latest",
       "signature": "[TIME 2026 Organizers]",
       "content": [
         "The call for papers for TIME 2026 is now open. We invite researchers and practitioners to submit original, unpublished research papers addressing contemporary challenges in web technologies, responsible AI, and evaluation methodologies.",
