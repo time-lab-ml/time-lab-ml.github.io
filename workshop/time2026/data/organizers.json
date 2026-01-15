@@ -72,8 +72,88 @@
   ],
   "programCommittee": [
     {
-      "name": "TBD",
-      "institution": ""
+      "name": "Ashutosh Ahuja",
+      "institution": "Starbucks (Area Chair)"
+    },
+    {
+      "name": "Fuman Xie",
+      "institution": "University of Queensland (Area Chair)"
+    },
+    {
+      "name": "Xiaohan Yu",
+      "institution": "Macquarie University (Area Chair)"
+    },
+    {
+      "name": "Zicheng Pan",
+      "institution": "Griffith University (Area Chair)"
+    },
+    {
+      "name": "Akshar Prabhu Desai",
+      "institution": "Google"
+    },
+    {
+      "name": "Aniket Devle",
+      "institution": "University of The Cumberlands"
+    },
+    {
+      "name": "Arpit Sharma",
+      "institution": "Visvesvaraya Technological University"
+    },
+    {
+      "name": "Edwin Kwadwo Tenagyei",
+      "institution": "Griffith University"
+    },
+    {
+      "name": "Haosen Li",
+      "institution": "Ocean University of China"
+    },
+    {
+      "name": "Jemshit Iskanderov",
+      "institution": "Touro University"
+    },
+    {
+      "name": "Kazi Mohammed Amanat Kamal",
+      "institution": "Charles Sturt University"
+    },
+    {
+      "name": "Lucy Lu",
+      "institution": "Arkansas State University"
+    },
+    {
+      "name": "Md Mehedi Hasan",
+      "institution": "Charles Sturt University"
+    },
+    {
+      "name": "Md Sarwar Kamal",
+      "institution": "University of New South Wales"
+    },
+    {
+      "name": "Sathish Ramkumar",
+      "institution": "Intuit"
+    },
+    {
+      "name": "Shaofeng Liang",
+      "institution": "China University of Petroleum"
+    },
+    {
+      "name": "Shrinivass Arunachalam Balasubramanian",
+      "institution": "Fidelity Investments"
+    },
+    {
+      "name": "Sudarshan Badireddi",
+      "institution": "Kennesaw State University"
+    },
+    {
+      "name": "Theodore Tochukwu Omeche",
+      "institution": "Bells University of Technology"
+    },
+    {
+      "name": "Tianyi Yao",
+      "institution": "Microsoft"
+    },
+    {
+      "name": "Yi-Jui Huang",
+      "institution": "National Yang Ming Chiao Tung University"
     }
   ],
   "awardCommittee": [
