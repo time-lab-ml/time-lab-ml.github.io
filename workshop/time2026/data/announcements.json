@@ -1,10 +1,26 @@
 {
   "announcements": [
     {
+      "title": "TIME 2026 Paper Awards Announced",
+      "date": "March 3, 2026",
+      "featured": true,
+      "badge": "New",
+      "signature": "[TIME 2026 Award Committee]",
+      "content": [
+        "The TIME 2026 Award Committee is pleased to announce the recipients of this year's paper awards. The following papers were selected on the basis of scientific contribution, methodological rigor, clarity of presentation, and significance to the workshop's research themes.",
+        "The award selection was conducted by the Award Committee: <strong>Dr. Syed Mohammed Shamsul Islam</strong> and <strong>Dr. Md Zakir Hossain</strong>. We congratulate all recipients and thank all authors for their outstanding contributions to TIME 2026."
+      ],
+      "list": [
+        "<strong>Best Paper Award</strong> &mdash; <em>Talking-Head Generation in Practice</em>",
+        "<strong>Best Paper Runner-Up Award</strong> &mdash; <em>Towards Better Evaluation Metrics for Text-to-Motion Generation</em>",
+        "<strong>Best Student Paper Award</strong> &mdash; <em>An Edge Computing Framework for Deep Learning-Based Anomaly Detection in Satellite-Linked Autonomous Vehicles</em>",
+        "<strong>Best Student Paper Award</strong> &mdash; <em>RadioAR: Autoregressive Modeling for Accurate Radio Map Estimation</em>"
+      ]
+    },
+    {
       "title": "Review Process & Preliminary Reviews",
       "date": "January 16, 2026",
       "featured": true,
-      "badge": "New",
       "signature": "[TIME 2026 Program Chairs]",
       "content": [
         "All submissions underwent a rigorous multi-stage review process. Each paper was first screened by the Program Chairs for formatting compliance and completeness, followed by automated checks for AI-generated content and potential reference hallucinations. Submissions passing these checks were then reviewed by at least three expert reviewers.",
