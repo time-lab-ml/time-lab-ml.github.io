@@ -25,6 +25,11 @@ function renderAnnouncementCard(announcement) {
     linkHtml = `<a href="${announcement.link.url}" class="announcement-link"${targetAttr}>${announcement.link.text}</a>`;
   }
 
+  // Render badge if exists
+  const badgeHtml = announcement.badge
+    ? `<span class="announcement-badge">${announcement.badge}</span>`
+    : '';
+
   // Render signature if exists (format: [S1], [S2], etc.)
   const signatureHtml = announcement.signature 
     ? `<div class="announcement-signature">${announcement.signature}</div>` 
@@ -33,7 +38,7 @@ function renderAnnouncementCard(announcement) {
   return `
         <article class="announcement-card${featuredClass}">
           <div class="announcement-header">
-            <h3>${announcement.title}</h3>
+            <h3>${announcement.title}${badgeHtml}</h3>
             <span class="announcement-date">${announcement.date}</span>
           </div>
           <div class="announcement-content">

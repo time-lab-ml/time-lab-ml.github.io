@@ -37,6 +37,18 @@ export async function renderOrganizers(containerId, options = {}) {
         </div>`;
     }).join('');
     
+    // Render Area Chairs
+    const areaChairsHtml = data.areaChairs ? data.areaChairs.map(member => {
+      const nameHtml = member.link
+        ? `<a href="${member.link}" target="_blank">${member.name}</a>`
+        : member.name;
+      return `
+        <div class="committee-member">
+          <span class="committee-name">${nameHtml}</span>
+          ${member.institution ? `<span class="committee-institution">${member.institution}</span>` : ''}
+        </div>`;
+    }).join('') : '<div class="committee-member"><span class="committee-name">TBD</span></div>';
+
     // Render Program Committee
     const programCommitteeHtml = data.programCommittee ? data.programCommittee.map(member => {
       const nameHtml = member.link 
@@ -70,6 +82,11 @@ export async function renderOrganizers(containerId, options = {}) {
       <h3 class="subsection-title" style="margin-top: 3rem;">Workshop Coordinators</h3>
       <div class="coordinators-grid">
         ${coordinatorsHtml}
+      </div>
+
+      <h3 class="subsection-title" style="margin-top: 3rem;">Area Chairs</h3>
+      <div class="committee-grid">
+        ${areaChairsHtml}
       </div>
 
       <h3 class="subsection-title" style="margin-top: 3rem;">Program Committee</h3>
