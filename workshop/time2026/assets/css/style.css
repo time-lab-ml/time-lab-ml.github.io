@@ -343,8 +343,8 @@ strong {
   right: 0;
   bottom: 0;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center center;
+  background-attachment: scroll;
   z-index: 0;
 }
 
@@ -418,7 +418,8 @@ strong {
 }
 
 .page-hero {
-  min-height: 50vh;
+  height: clamp(260px, 31.25vw, 520px);
+  min-height: 0;
 }
 
 .page-hero-corner {
@@ -452,11 +453,12 @@ strong {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 50vh;
+    min-height: clamp(380px, 60vh, 520px);
   }
   
   .page-hero {
-    min-height: 40vh;
+    height: clamp(220px, 31.25vw, 260px);
+    min-height: 0;
   }
   
   .hero-title {
@@ -471,9 +473,6 @@ strong {
     gap: var(--spacing-sm);
   }
   
-  .hero-background {
-    background-attachment: scroll;
-  }
 }
 
 /* ===== Sections ===== */
@@ -728,6 +727,15 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.organizer-dr-yasmeen-george .organizer-image-wrapper img {
+  object-position: center 62%;
+}
+
+.organizer-dr-shreya-ghosh .organizer-image-wrapper img {
+  object-position: center 62%;
+  transform: translateY(-6px) scale(1.08);
 }
 
 .organizer-name {

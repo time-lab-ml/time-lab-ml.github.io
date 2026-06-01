@@ -10,8 +10,12 @@ export async function renderOrganizers(containerId, options = {}) {
     // Render Workshop Organizers
     const organizersHtml = data.workshopOrganizers.map(org => {
       const imgSrc = org.image.startsWith('http') ? org.image : `${basePath}${org.image}`;
+      const organizerSlug = org.name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
       return `
-        <div class="organizer-card">
+        <div class="organizer-card organizer-${organizerSlug}">
           <div class="organizer-image-wrapper">
             <img src="${imgSrc}" alt="${org.name}">
           </div>

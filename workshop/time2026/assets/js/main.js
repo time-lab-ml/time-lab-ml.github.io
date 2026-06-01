@@ -197,8 +197,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // ===== Parallax Effect for Hero Background =====
   const heroBackground = document.querySelector('.hero-background');
+  const supportsStableParallax = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1024px)').matches;
   
-  if (heroBackground) {
+  if (heroBackground && supportsStableParallax) {
     window.addEventListener('scroll', function() {
       const scrolled = window.pageYOffset;
       const rate = scrolled * 0.5;
