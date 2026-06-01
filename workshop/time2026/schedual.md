@@ -1,6 +1,6 @@
 # Program Schedule
 
-The workshop will be held virtually on June 30, 2026. The program follows Dubai local time (GST, Gulf Standard Time, UTC+4); in-person attendance in Dubai is not required.
+TIME 2026 will be held virtually on June 30, 2026, with all sessions scheduled in Dubai time (GST, UTC+4); in-person attendance is not required.
 
 Morning Session:
 
@@ -12,8 +12,8 @@ Afternoon Session:
 
 Presentation formats:
 
-- Keynote speeches: 30-minute presentation + 5-minute Q&A.
-- Oral presentations: 15 minutes per paper. Presenters may choose either 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A.
+- Keynotes: 30-minute talk + 5-minute Q&A.
+- Oral presentations: 15 minutes per paper; presenters may choose either 10 + 5 or 12 + 3 minutes for talk + Q&A.
 
 ---
 
@@ -26,7 +26,7 @@ Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Md Zakir Hossain
 
-9:55 AM - 10:40 AM - Oral Session 1: Visual Intelligence, Security, and Evaluation(15 minutes per paper; presenters may choose 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A) - Dr. Syed Mohammed Shamsul Islam
+9:55 AM - 10:40 AM - Oral Session 1: Visual Intelligence, Security, and Evaluation(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Syed Mohammed Shamsul Islam
 
 1. *Rethinking Object Detection and Tracking*
    Arpit Sharma, Lei Wang, Yongsheng Gao
@@ -58,7 +58,7 @@ Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Md Zakir Hossain
 
-11:45 AM - 12:30 PM - Oral Session 2: Trustworthy Systems and Generative Methods(15 minutes per paper; presenters may choose 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A) - Dr. Syed Mohammed Shamsul Islam
+11:45 AM - 12:30 PM - Oral Session 2: Trustworthy Systems and Generative Methods(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Syed Mohammed Shamsul Islam
 
 4. *Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance*
    Haosen Li, Wenshuo Chen, Shaofeng Liang, Lei Wang, Haozhe Jia, Yutao Yue
@@ -74,7 +74,7 @@ Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Syed Mohammed Shamsul Islam
 
-2:05 PM - 2:50 PM - Oral Session 3: Efficient Models, Wireless AI, and Media Generation(15 minutes per paper; presenters may choose 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A) - Dr. Md Zakir Hossain
+2:05 PM - 2:50 PM - Oral Session 3: Efficient Models, Wireless AI, and Media Generation(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Md Zakir Hossain
 
 7. *Beyond Fine-Tuning: The Present and Future of Parameter-Efficient Fine-Tuning in Vision Transformers*
    Edwin Kwadwo Tenagyei, Lei Wang, Yongsheng Gao
