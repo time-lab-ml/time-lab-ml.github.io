@@ -1,6 +1,6 @@
 # Program Schedule
 
-The workshop will be held on June 30, 2026, in Dubai, UAE local time (GST, Gulf Standard Time, UTC+4).
+The workshop will be held virtually on June 30, 2026. The program follows Dubai local time (GST, Gulf Standard Time, UTC+4); in-person attendance in Dubai is not required.
 
 Morning Session:
 
@@ -10,18 +10,23 @@ Afternoon Session:
 
 - 1:30 PM - 5:00 PM(3.5 hours)
 
+Presentation formats:
+
+- Keynote speeches: 30-minute presentation + 5-minute Q&A.
+- Oral presentations: 15 minutes per paper. Presenters may choose either 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A.
+
 ---
 
 time - event - session chair
 
 9:00 AM - 9:20 AM - Welcome and Opening Comments(20 minutes) - Dr. Syed Mohammed Shamsul Islam
 
-9:20 AM - 9:55 AM - 1st Keynote Speech(30 + 5 minutes)
+9:20 AM - 9:55 AM - 1st Keynote Speech(30-minute presentation + 5-minute Q&A)
 Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Md Zakir Hossain
 
-9:55 AM - 10:40 AM - Oral Session 1: Visual Intelligence, Security, and Evaluation(15 minutes each * 3) - Dr. Syed Mohammed Shamsul Islam
+9:55 AM - 10:40 AM - Oral Session 1: Visual Intelligence, Security, and Evaluation(15 minutes per paper; presenters may choose 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A) - Dr. Syed Mohammed Shamsul Islam
 
 1. *Rethinking Object Detection and Tracking*
    Arpit Sharma, Lei Wang, Yongsheng Gao
@@ -48,28 +53,28 @@ Poster Session A:
 - *Graph Aggregation Beyond Homophily Assumption - a more meaningful way to model networks*
   Lucy Lu
 
-11:10 AM - 11:45 AM - 2nd Keynote Speech(30 + 5 minutes)
+11:10 AM - 11:45 AM - 2nd Keynote Speech(30-minute presentation + 5-minute Q&A)
 Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Md Zakir Hossain
 
-11:45 AM - 12:30 PM - Oral Session 2: Trustworthy Systems and Generative Methods(15 minutes each * 3) - Dr. Syed Mohammed Shamsul Islam
+11:45 AM - 12:30 PM - Oral Session 2: Trustworthy Systems and Generative Methods(15 minutes per paper; presenters may choose 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A) - Dr. Syed Mohammed Shamsul Islam
 
-4. *Trust Degradation in Multimodal Time-Series Predictive Maintenance Systems*
-   Theodore Tochukwu Omeche, Joseph Azeta
-
-5. *Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance*
+4. *Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance*
    Haosen Li, Wenshuo Chen, Shaofeng Liang, Lei Wang, Haozhe Jia, Yutao Yue
 
-6. *An Edge Computing Framework for Deep Learning-Based Anomaly Detection in Satellite-Linked Autonomous Vehicles*
+5. *An Edge Computing Framework for Deep Learning-Based Anomaly Detection in Satellite-Linked Autonomous Vehicles*
    MD Mehedi Hasan, Maumita Bhattacharya, Rafiqul Islam
 
-1:30 PM - 2:05 PM - 3rd Keynote Speech(30 + 5 minutes)
+6. *Evaluating Trustworthiness in Reactive Web Architectures: A Structured Framework and Comparative Analysis*
+   Shrinivass Arunachalam Balasubramanian
+
+1:30 PM - 2:05 PM - 3rd Keynote Speech(30-minute presentation + 5-minute Q&A)
 Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Syed Mohammed Shamsul Islam
 
-2:05 PM - 3:05 PM - Oral Session 3: Efficient Models, Wireless AI, Web Trust, and Media Generation(15 minutes each * 4) - Dr. Md Zakir Hossain
+2:05 PM - 2:50 PM - Oral Session 3: Efficient Models, Wireless AI, and Media Generation(15 minutes per paper; presenters may choose 10-minute presentation + 5-minute Q&A or 12-minute presentation + 3-minute Q&A) - Dr. Md Zakir Hossain
 
 7. *Beyond Fine-Tuning: The Present and Future of Parameter-Efficient Fine-Tuning in Vision Transformers*
    Edwin Kwadwo Tenagyei, Lei Wang, Yongsheng Gao
@@ -77,13 +82,10 @@ Session Chair: Dr. Syed Mohammed Shamsul Islam
 8. *RadioAR: Autoregressive Modeling for Accurate Radio Map Estimation*
    Peilin Zheng, Xiucheng Wang, Wenshuo Chen, Ruijin Sun, Lei Wang, Yutao Yue, Nan Cheng
 
-9. *Evaluating Trustworthiness in Reactive Web Architectures: A Structured Framework and Comparative Analysis*
-   Shrinivass Arunachalam Balasubramanian
+9. *Talking-Head Generation in Practice*
+   Zhicheng Zhang, Lei Wang, Yongsheng Gao, Yu Zhang
 
-10. *Talking-Head Generation in Practice*
-    Zhicheng Zhang, Lei Wang, Yongsheng Gao, Yu Zhang
-
-3:05 PM - 3:20 PM - Coffee Break / Poster Session B
+2:50 PM - 3:20 PM - Coffee Break / Poster Session B
 
 Poster Session B:
 
@@ -96,7 +98,7 @@ Poster Session B:
 - *Fine-Grained Visual Understanding for Multimodal and Trustworthy AI*
   Syuan-Hao Li, Lei Wang, Yongsheng Gao, Yi-Jui Huang
 
-3:20 PM - 3:55 PM - 4th Keynote Speech(30 + 5 minutes)
+3:20 PM - 3:55 PM - 4th Keynote Speech(30-minute presentation + 5-minute Q&A)
 Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Syed Mohammed Shamsul Islam
@@ -112,29 +114,26 @@ oral:
 *Rethinking Object Detection and Tracking*
 Arpit Sharma, Lei Wang, Yongsheng Gao
 
-*Trust Degradation in Multimodal Time-Series Predictive Maintenance Systems*
-Theodore Tochukwu Omeche, Joseph Azeta
-
-*Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance*
-Haosen Li, Wenshuo Chen, Shaofeng Liang, Lei Wang, Haozhe Jia, Yutao Yue
-
-*Beyond Fine-Tuning: The Present and Future of Parameter-Efficient Fine-Tuning in Vision Transformers*
-Edwin Kwadwo Tenagyei, Lei Wang, Yongsheng Gao
-
-*An Edge Computing Framework for Deep Learning-Based Anomaly Detection in Satellite-Linked Autonomous Vehicles*
-MD Mehedi Hasan, Maumita Bhattacharya, Rafiqul Islam
-
-*RadioAR: Autoregressive Modeling for Accurate Radio Map Estimation*
-Peilin Zheng, Xiucheng Wang, Wenshuo Chen, Ruijin Sun, Lei Wang, Yutao Yue, Nan Cheng
-
 *How Quantum Period Finding Breaks Rivest Shamir Adleman Algorithms*
 Md Sarwar Kamal, Sonia Farhana Nimmy, Ripon Chakrabortty, Md Zakir Hossain, Rafiqul Islam
 
 *Towards Better Evaluation Metrics for Text-to-Motion Generation*
 Wenshuo Chen, Haozhe Jia, Kuimou Yu, Songning Lai, Lei Wang, Yutao Yue
 
+*Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance*
+Haosen Li, Wenshuo Chen, Shaofeng Liang, Lei Wang, Haozhe Jia, Yutao Yue
+
+*An Edge Computing Framework for Deep Learning-Based Anomaly Detection in Satellite-Linked Autonomous Vehicles*
+MD Mehedi Hasan, Maumita Bhattacharya, Rafiqul Islam
+
 *Evaluating Trustworthiness in Reactive Web Architectures: A Structured Framework and Comparative Analysis*
 Shrinivass Arunachalam Balasubramanian
+
+*Beyond Fine-Tuning: The Present and Future of Parameter-Efficient Fine-Tuning in Vision Transformers*
+Edwin Kwadwo Tenagyei, Lei Wang, Yongsheng Gao
+
+*RadioAR: Autoregressive Modeling for Accurate Radio Map Estimation*
+Peilin Zheng, Xiucheng Wang, Wenshuo Chen, Ruijin Sun, Lei Wang, Yutao Yue, Nan Cheng
 
 *Talking-Head Generation in Practice*
 Zhicheng Zhang, Lei Wang, Yongsheng Gao, Yu Zhang
@@ -157,7 +156,7 @@ Kazi Mohammed Amanat Kamal, Rafiqul Islam, Azizur Rahman
 - *Graph Aggregation Beyond Homophily Assumption - a more meaningful way to model networks*
 Lucy Lu
 
-Poster Session B (PB): 3:05 PM - 3:20 PM
+Poster Session B (PB): 2:50 PM - 3:20 PM
 
 - *Privacy-Aware Machine Unlearning with SISA for Reinforcement Learning–Based Ransomware Detection*
 JANNATUL FERDOUS, Rafiqul Islam, Zahid Islam
