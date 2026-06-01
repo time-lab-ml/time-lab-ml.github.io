@@ -729,15 +729,6 @@ strong {
   object-fit: cover;
 }
 
-.organizer-dr-yasmeen-george .organizer-image-wrapper img {
-  object-position: center 62%;
-}
-
-.organizer-dr-shreya-ghosh .organizer-image-wrapper img {
-  object-position: center 62%;
-  transform: translateY(-6px) scale(1.08);
-}
-
 .organizer-name {
   font-size: 1.1rem;
   color: var(--color-primary);

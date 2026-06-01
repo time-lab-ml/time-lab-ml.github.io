@@ -44,14 +44,14 @@
     },
     {
       "name": "Dr. Yasmeen George",
-      "image": "assets/images/Yasmeen.webp",
+      "image": "assets/images/Yasmeen-crop.webp",
       "institution": "Monash University",
       "bio": "Misinformation detection and content moderation.",
       "link": "https://research.monash.edu/en/persons/yasmeen-george/"
     },
     {
       "name": "Dr. Shreya Ghosh",
-      "image": "assets/images/Shreya.jpeg",
+      "image": "assets/images/Shreya-crop.jpeg",
       "institution": "The University of Queensland",
       "bio": "Advanced analytics and evaluation frameworks.",
       "link": "https://about.uq.edu.au/experts/50688"
