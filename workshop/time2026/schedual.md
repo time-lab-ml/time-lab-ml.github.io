@@ -1,6 +1,6 @@
 # Program Schedule
 
-TIME 2026 will be held virtually on June 30, 2026, with all sessions scheduled in Dubai time (GST, UTC+4); in-person attendance is not required.
+TIME 2026 will be held virtually on Tuesday, June 30, 2026, with all sessions scheduled in Dubai time (GST, UTC+4).
 
 Morning Session:
 
@@ -24,7 +24,7 @@ time - event - session chair
 9:20 AM - 9:55 AM - 1st Keynote Speech(30-minute presentation + 5-minute Q&A)
 Speaker: TBD
 Theme: TBD
-Session Chair: Dr. Md Zakir Hossain
+Session Chair: Prof. Rafiqul Islam
 
 9:55 AM - 10:40 AM - Oral Session 1: Visual Intelligence, Security, and Evaluation(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Syed Mohammed Shamsul Islam
 
@@ -58,7 +58,7 @@ Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Md Zakir Hossain
 
-11:45 AM - 12:30 PM - Oral Session 2: Trustworthy Systems and Generative Methods(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Syed Mohammed Shamsul Islam
+11:45 AM - 12:30 PM - Oral Session 2: Trustworthy Systems and Generative Methods(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Md Zakir Hossain
 
 4. *Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance*
    Haosen Li, Wenshuo Chen, Shaofeng Liang, Lei Wang, Haozhe Jia, Yutao Yue
@@ -74,7 +74,7 @@ Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Syed Mohammed Shamsul Islam
 
-2:05 PM - 2:50 PM - Oral Session 3: Efficient Models, Wireless AI, and Media Generation(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Dr. Md Zakir Hossain
+2:05 PM - 2:50 PM - Oral Session 3: Efficient Models, Wireless AI, and Media Generation(15 minutes per paper; 10 + 5 or 12 + 3 for talk + Q&A) - Prof. Rafiqul Islam
 
 7. *Beyond Fine-Tuning: The Present and Future of Parameter-Efficient Fine-Tuning in Vision Transformers*
    Edwin Kwadwo Tenagyei, Lei Wang, Yongsheng Gao
@@ -103,9 +103,9 @@ Speaker: TBD
 Theme: TBD
 Session Chair: Dr. Syed Mohammed Shamsul Islam
 
-3:55 PM - 4:45 PM - panel discussion(50 minutes) - Dr. Syed Mohammed Shamsul Islam
+3:55 PM - 4:45 PM - panel discussion(50 minutes) - Prof. Rafiqul Islam and Dr. Syed Mohammed Shamsul Islam and Dr. Md Zakir Hossain
 
-4:45 PM - 5:00 PM - paper awards and closing comments(15 minutes) - Dr. Md Zakir Hossain
+4:45 PM - 5:00 PM - paper awards and closing comments(15 minutes) - Prof. Rafiqul Islam
 
 ---
 
