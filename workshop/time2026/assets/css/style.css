@@ -1363,28 +1363,43 @@ strong {
   box-shadow: var(--shadow-sm);
 }
 
+.poster-session-summary > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
 .poster-session-summary strong,
 .poster-session-summary span {
   display: block;
 }
 
+.poster-session-summary strong {
+  line-height: 1.25;
+}
+
 .poster-session-summary div > span {
   color: var(--color-text-secondary);
   font-size: 0.95rem;
+  line-height: 1.35;
 }
 
 .session-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2rem;
-  padding: 0.25rem 0.6rem;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 2.75rem;
+  width: 2.75rem;
+  height: 2rem;
+  padding: 0.24rem 0 0;
   border-radius: var(--radius-sm);
   background: var(--color-primary);
   color: white;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1;
+  text-align: center;
 }
 
 .poster-table th:first-child,
