@@ -1307,6 +1307,14 @@ strong {
   width: 240px;
 }
 
+.schedule-break-row td {
+  background: var(--color-bg-secondary);
+}
+
+.schedule-break-row strong {
+  color: var(--color-primary);
+}
+
 .session-paper-list {
   margin: var(--spacing-sm) 0 0 1.25rem;
 }
