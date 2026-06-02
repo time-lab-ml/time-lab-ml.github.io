@@ -10,8 +10,8 @@
     {
       "name": "Dr. Md Zakir Hossain",
       "image": "https://dxybwjmxea64j.cloudfront.net/md-zakir-hossain-4fd95ece.jpg?ver=0.024987017549913837",
-      "institution": "Curtin University",
-      "bio": "Expertise in multimodal analytics and responsible AI.",
+      "institution": "Australian National University",
+      "bio": "Research in health informatics, affective computing, and privacy-preserving AI.",
       "link": "https://researchportalplus.anu.edu.au/en/persons/zakir-hossain/"
     },
     {
@@ -24,7 +24,7 @@
     {
       "name": "Dr. Zicheng Pan",
       "image": "assets/images/zzp.png",
-      "institution": "Griffith University",
+      "institution": "University of Queensland",
       "bio": "Research in computer vision and multimodal learning.",
       "link": "https://zichengpan.github.io/"
     },
@@ -167,8 +167,8 @@
     },
     {
       "name": "Dr. Md Zakir Hossain",
-      "institution": "Curtin University",
-      "link": "https://staffportal.curtin.edu.au/staff/profile/view/md-zakir-hossain-4fd95ece/"
+      "institution": "Australian National University",
+      "link": "https://researchportalplus.anu.edu.au/en/persons/zakir-hossain/"
     }
   ]
 }
