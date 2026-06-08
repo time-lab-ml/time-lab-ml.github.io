@@ -106,7 +106,7 @@
                 <div class="publication-links">
                   <span class="link-block">
                     <a href="https://arxiv.org/pdf/2509.09151" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="ai ai-arxiv-square"></i></span>
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
                       <span>Paper</span>
                     </a>
                   </span>
@@ -115,12 +115,6 @@
                       <span class="icon"><i class="fas fa-code"></i></span>
                       <span>Code</span>
                     </span>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/CompVis/owm-95" target="_blank" rel="noopener" class="button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-database"></i></span>
-                      <span>Dataset</span>
-                    </a>
                   </span>
                 </div>
               </div>
@@ -145,6 +139,10 @@
             context-heavy scenes, motion-centric transformations, and
             hand-object interactions.
           </h2>
+          <p class="dataset-attribution has-text-centered">
+            The visualization videos are from the
+            <a href="https://huggingface.co/datasets/CompVis/owm-95" target="_blank" rel="noopener">OWM-95 dataset</a>.
+          </p>
         </div>
       </div>
     </section>
@@ -196,44 +194,51 @@
       <div class="container is-max-widescreen">
         <h2 class="title is-3 has-text-centered">MotionFormer</h2>
         <p class="section-note has-text-centered">
-          Per-frame biases as moving attention, then every block across depth.
+          Visualization video: <strong>write</strong>. Dataset comparisons use the
+          final transformer block, <strong>Block 12</strong>; the depth view below
+          shows the same video from Block 1 to Block 12.
         </p>
 
-        <h3 class="section-kicker">Per-frame biases as moving attention</h3>
+        <h3 class="section-kicker">Per-frame biases as moving attention, final block</h3>
         <div class="bias-grid">
           <div class="gif-card is-source">
             <img src="static/images/gifs/original/write.gif" alt="Write video original sampled frames" loading="lazy">
             <div class="gif-copy">
               <h3>Original Frames</h3>
+              <p>write video</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/motionformer/k400/write/block11.gif" alt="MotionFormer Kinetics-400 write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Kinetics-400</h3>
+              <p>write, Block 12</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/motionformer/k600/write/block11.gif" alt="MotionFormer Kinetics-600 write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Kinetics-600</h3>
+              <p>write, Block 12</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/motionformer/ssv2/write/block11.gif" alt="MotionFormer Something-Something V2 write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Something-Something V2</h3>
+              <p>write, Block 12</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/motionformer/ek/write/block11.gif" alt="MotionFormer EPIC-KITCHENS write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>EPIC-KITCHENS-100</h3>
+              <p>write, Block 12</p>
             </div>
           </div>
         </div>
 
-        <h3 class="section-kicker">How attention changes with depth</h3>
+        <h3 class="section-kicker">How attention changes with depth, write video</h3>
         <div class="block-grid" data-block-grid="motionformer-ssv2" data-video="write"></div>
       </div>
     </section>
@@ -242,38 +247,44 @@
       <div class="container is-max-widescreen">
         <h2 class="title is-3 has-text-centered">TimeSformer</h2>
         <p class="section-note has-text-centered">
-          Per-frame biases as moving attention, then every block across depth.
+          Visualization video: <strong>pour</strong>. Dataset comparisons use the
+          final transformer block, <strong>Block 12</strong>; the depth view below
+          shows the same video from Block 1 to Block 12.
         </p>
 
-        <h3 class="section-kicker">Per-frame biases as moving attention</h3>
+        <h3 class="section-kicker">Per-frame biases as moving attention, final block</h3>
         <div class="bias-grid">
           <div class="gif-card is-source">
             <img src="static/images/gifs/original/pour.gif" alt="Pour video original sampled frames" loading="lazy">
             <div class="gif-copy">
               <h3>Original Frames</h3>
+              <p>pour video</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/timesformer/k400/pour/block11.gif" alt="TimeSformer Kinetics-400 pour video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Kinetics-400</h3>
+              <p>pour, Block 12</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/timesformer/k600/pour/block11.gif" alt="TimeSformer Kinetics-600 pour video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Kinetics-600</h3>
+              <p>pour, Block 12</p>
             </div>
           </div>
           <div class="gif-card">
             <img src="static/images/gifs/timesformer/ssv2/pour/block11.gif" alt="TimeSformer Something-Something V2 pour video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Something-Something V2</h3>
+              <p>pour, Block 12</p>
             </div>
           </div>
         </div>
 
-        <h3 class="section-kicker">How attention changes with depth</h3>
+        <h3 class="section-kicker">How attention changes with depth, pour video</h3>
         <div class="block-grid" data-block-grid="timesformer-ssv2" data-video="pour"></div>
       </div>
     </section>

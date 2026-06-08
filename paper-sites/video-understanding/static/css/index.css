@@ -827,6 +827,24 @@ a:focus {
   line-height: 1.7;
 }
 
+.dataset-attribution {
+  margin: 0.85rem auto 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.dataset-attribution a {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dataset-attribution a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
 .key-points {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -923,6 +941,11 @@ a:focus {
 .bias-grid .gif-card h3 {
   font-size: clamp(0.72rem, 0.85vw, 0.95rem);
   white-space: nowrap;
+}
+
+.bias-grid .gif-card p {
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .gif-card.is-source {
