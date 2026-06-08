@@ -776,8 +776,41 @@ a:focus {
   margin-bottom: 0.35rem;
 }
 
+.publication-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.publication-links .link-block {
+  align-items: center;
+  display: inline-flex;
+  margin: 8px 0;
+}
+
 .publication-links .button {
+  align-items: center;
   border-radius: 999px !important;
+  display: inline-flex;
+  height: 40px;
+  line-height: 1;
+  margin: 0;
+  min-height: 40px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.publication-links .icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.publication-links .icon .ai {
+  font-size: 1.05em;
+  line-height: 1;
 }
 
 .teaser-image {
