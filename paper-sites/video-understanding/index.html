@@ -238,6 +238,46 @@
       </div>
     </section>
 
+    <section class="section" id="timesformer-focus">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">TimeSformer</h2>
+        <p class="section-note has-text-centered">
+          Per-frame biases as moving attention, then every block across depth.
+        </p>
+
+        <h3 class="section-kicker">Per-Frame Biases as Moving Attention</h3>
+        <div class="bias-grid">
+          <div class="gif-card is-source">
+            <img src="static/images/gifs/original/pour.gif" alt="Pour video original sampled frames" loading="lazy">
+            <div class="gif-copy">
+              <h3>Original Frames</h3>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/timesformer/k400/pour/block11.gif" alt="TimeSformer Kinetics-400 pour video block 12 attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Kinetics-400</h3>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/timesformer/k600/pour/block11.gif" alt="TimeSformer Kinetics-600 pour video block 12 attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Kinetics-600</h3>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/timesformer/ssv2/pour/block11.gif" alt="TimeSformer Something-Something V2 pour video block 12 attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Something-Something V2</h3>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-kicker">How Attention Changes with Depth</h3>
+        <div class="block-grid" data-block-grid="timesformer-ssv2" data-video="pour"></div>
+      </div>
+    </section>
+
     <section class="section hero is-light" id="gif-playground">
       <div class="container is-max-widescreen">
         <h2 class="title is-3 has-text-centered">Playground</h2>

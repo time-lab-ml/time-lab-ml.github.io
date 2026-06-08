@@ -58,10 +58,11 @@ function renderBlockGrid(container, group, video) {
 }
 
 function setupAttentionPlayground() {
-    const motionformerDepthGrid = document.querySelector('[data-block-grid="motionformer-ssv2"]');
-    const motionformerSsv2 = attentionGifGroups.find(group => group.id === 'motionformer-ssv2');
-    const motionformerVideo = attentionVideos.find(video => video.id === motionformerDepthGrid?.dataset.video);
-    renderBlockGrid(motionformerDepthGrid, motionformerSsv2, motionformerVideo);
+    document.querySelectorAll('[data-block-grid]').forEach(grid => {
+        const group = attentionGifGroups.find(candidate => candidate.id === grid.dataset.blockGrid);
+        const video = attentionVideos.find(candidate => candidate.id === grid.dataset.video);
+        renderBlockGrid(grid, group, video);
+    });
 
     const selectA = document.getElementById('compare-a');
     const selectB = document.getElementById('compare-b');
@@ -100,8 +101,8 @@ function setupAttentionPlayground() {
 
     selectA.value = 'motionformer-k600';
     selectB.value = 'motionformer-ssv2';
-    videoSelectA.value = 'write';
-    videoSelectB.value = 'write';
+    videoSelectA.value = 'instrument';
+    videoSelectB.value = 'instrument';
 
     function updateComparison() {
         const groupA = attentionGifGroups.find(group => group.id === selectA.value);

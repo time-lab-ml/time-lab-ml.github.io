@@ -873,6 +873,18 @@ a:focus {
   align-items: stretch;
 }
 
+@media screen and (min-width: 1025px) {
+  #timesformer-focus .bias-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #timesformer-focus .bias-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .block-strip,
 .block-grid {
   display: grid;
