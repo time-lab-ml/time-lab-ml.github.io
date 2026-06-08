@@ -1,5 +1,126 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
+const attentionGifGroups = [
+    { id: 'motionformer-k400', model: 'motionformer', pretrain: 'k400', label: 'MotionFormer / Kinetics-400' },
+    { id: 'motionformer-k600', model: 'motionformer', pretrain: 'k600', label: 'MotionFormer / Kinetics-600' },
+    { id: 'motionformer-ssv2', model: 'motionformer', pretrain: 'ssv2', label: 'MotionFormer / Something-Something V2' },
+    { id: 'motionformer-ek', model: 'motionformer', pretrain: 'ek', label: 'MotionFormer / EPIC-KITCHENS-100' },
+    { id: 'timesformer-k400', model: 'timesformer', pretrain: 'k400', label: 'TimeSformer / Kinetics-400' },
+    { id: 'timesformer-k600', model: 'timesformer', pretrain: 'k600', label: 'TimeSformer / Kinetics-600' },
+    { id: 'timesformer-ssv2', model: 'timesformer', pretrain: 'ssv2', label: 'TimeSformer / Something-Something V2' },
+    { id: 'videomae-k400', model: 'videomae', pretrain: 'k400', label: 'VideoMAE / Kinetics-400' },
+    { id: 'videomae-ssv2', model: 'videomae', pretrain: 'ssv2', label: 'VideoMAE / Something-Something V2' },
+];
+
+const attentionVideos = [
+    { id: 'matcha', label: 'matcha' },
+    { id: 'kitchen', label: 'kitchen' },
+    { id: 'pour', label: 'pour' },
+    { id: 'write', label: 'write' },
+    { id: 'instrument', label: 'instrument' },
+];
+
+const attentionBlockCount = 12;
+
+function blockGifPath(group, video, blockIndex) {
+    const blockName = `block${String(blockIndex).padStart(2, '0')}.gif`;
+    return `static/images/gifs/${group.model}/${group.pretrain}/${video.id}/${blockName}`;
+}
+
+function createGifCard(group, video, blockIndex) {
+    const card = document.createElement('div');
+    card.className = 'gif-card';
+
+    const blockNumber = blockIndex + 1;
+    const image = document.createElement('img');
+    image.src = blockGifPath(group, video, blockIndex);
+    image.alt = `${group.label} ${video.label} video block ${blockNumber} attention GIF`;
+    image.loading = 'lazy';
+
+    const copy = document.createElement('div');
+    copy.className = 'gif-copy';
+
+    const title = document.createElement('h3');
+    title.textContent = `Block ${blockNumber}`;
+
+    copy.appendChild(title);
+    card.appendChild(image);
+    card.appendChild(copy);
+    return card;
+}
+
+function renderBlockGrid(container, group, video) {
+    if (!container || !group || !video) return;
+    container.innerHTML = '';
+    for (let blockIndex = 0; blockIndex < attentionBlockCount; blockIndex += 1) {
+        container.appendChild(createGifCard(group, video, blockIndex));
+    }
+}
+
+function setupAttentionPlayground() {
+    const motionformerDepthGrid = document.querySelector('[data-block-grid="motionformer-ssv2"]');
+    const motionformerSsv2 = attentionGifGroups.find(group => group.id === 'motionformer-ssv2');
+    const motionformerVideo = attentionVideos.find(video => video.id === motionformerDepthGrid?.dataset.video);
+    renderBlockGrid(motionformerDepthGrid, motionformerSsv2, motionformerVideo);
+
+    const selectA = document.getElementById('compare-a');
+    const selectB = document.getElementById('compare-b');
+    const videoSelectA = document.getElementById('video-a');
+    const videoSelectB = document.getElementById('video-b');
+    const gridA = document.getElementById('compare-a-grid');
+    const gridB = document.getElementById('compare-b-grid');
+    const titleA = document.getElementById('compare-a-title');
+    const titleB = document.getElementById('compare-b-title');
+
+    if (!selectA || !selectB || !videoSelectA || !videoSelectB || !gridA || !gridB || !titleA || !titleB) return;
+
+    attentionGifGroups.forEach(group => {
+        const optionA = document.createElement('option');
+        optionA.value = group.id;
+        optionA.textContent = group.label;
+        selectA.appendChild(optionA);
+
+        const optionB = document.createElement('option');
+        optionB.value = group.id;
+        optionB.textContent = group.label;
+        selectB.appendChild(optionB);
+    });
+
+    attentionVideos.forEach(video => {
+        const optionA = document.createElement('option');
+        optionA.value = video.id;
+        optionA.textContent = video.label;
+        videoSelectA.appendChild(optionA);
+
+        const optionB = document.createElement('option');
+        optionB.value = video.id;
+        optionB.textContent = video.label;
+        videoSelectB.appendChild(optionB);
+    });
+
+    selectA.value = 'motionformer-k600';
+    selectB.value = 'motionformer-ssv2';
+    videoSelectA.value = 'write';
+    videoSelectB.value = 'write';
+
+    function updateComparison() {
+        const groupA = attentionGifGroups.find(group => group.id === selectA.value);
+        const groupB = attentionGifGroups.find(group => group.id === selectB.value);
+        const videoA = attentionVideos.find(video => video.id === videoSelectA.value);
+        const videoB = attentionVideos.find(video => video.id === videoSelectB.value);
+        titleA.textContent = groupA && videoA ? `${groupA.label} / ${videoA.label}` : '';
+        titleB.textContent = groupB && videoB ? `${groupB.label} / ${videoB.label}` : '';
+        renderBlockGrid(gridA, groupA, videoA);
+        renderBlockGrid(gridB, groupB, videoB);
+    }
+
+    selectA.addEventListener('change', updateComparison);
+    selectB.addEventListener('change', updateComparison);
+    videoSelectA.addEventListener('change', updateComparison);
+    videoSelectB.addEventListener('change', updateComparison);
+    updateComparison();
+}
+
 // More Works Dropdown Functionality
 function toggleMoreWorks() {
     const dropdown = document.getElementById('moreWorksDropdown');
@@ -144,5 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    setupAttentionPlayground();
 
 })

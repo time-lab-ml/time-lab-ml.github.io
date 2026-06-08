@@ -186,117 +186,86 @@
       </div>
     </section>
 
-    <section class="section" id="dynamic-daam">
+    <section class="section" id="motionformer-focus">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3 has-text-centered">Per-Frame Biases as Moving Attention</h2>
+        <h2 class="title is-3 has-text-centered">MotionFormer</h2>
         <p class="section-note has-text-centered">
-          Static DAAM frames become more informative when played over time. The
-          same input clip is shown beside MotionFormer attention maps induced by
-          different pretraining datasets.
+          Per-frame biases as moving attention, then every block across depth.
         </p>
 
+        <h3 class="section-kicker">Per-Frame Biases as Moving Attention</h3>
         <div class="bias-grid">
           <div class="gif-card is-source">
-            <img src="static/images/gifs/original_frames.gif" alt="Original sampled video frames" loading="lazy">
+            <img src="static/images/gifs/original/write.gif" alt="Write video original sampled frames" loading="lazy">
             <div class="gif-copy">
               <h3>Original Frames</h3>
-              <p>The shared input clip used for the dynamic comparison.</p>
             </div>
           </div>
           <div class="gif-card">
-            <img src="static/images/gifs/k600_context_bias.gif" alt="Kinetics-600 context-biased attention GIF" loading="lazy">
+            <img src="static/images/gifs/motionformer/k400/write/block11.gif" alt="MotionFormer Kinetics-400 write video block 12 attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Kinetics-400</h3>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/motionformer/k600/write/block11.gif" alt="MotionFormer Kinetics-600 write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Kinetics-600</h3>
-              <p>Attention is pulled toward surrounding objects and scene context.</p>
             </div>
           </div>
           <div class="gif-card">
-            <img src="static/images/gifs/ssv2_motion_bias.gif" alt="Something-Something V2 motion-biased attention GIF" loading="lazy">
+            <img src="static/images/gifs/motionformer/ssv2/write/block11.gif" alt="MotionFormer Something-Something V2 write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>Something-Something V2</h3>
-              <p>Attention emphasizes the motion trajectory and temporal change.</p>
             </div>
           </div>
           <div class="gif-card">
-            <img src="static/images/gifs/ek_interaction_bias.gif" alt="EPIC-KITCHENS-100 interaction-biased attention GIF" loading="lazy">
+            <img src="static/images/gifs/motionformer/ek/write/block11.gif" alt="MotionFormer EPIC-KITCHENS write video block 12 attention GIF" loading="lazy">
             <div class="gif-copy">
               <h3>EPIC-KITCHENS-100</h3>
-              <p>Attention concentrates on hand-object interaction and manipulation.</p>
             </div>
           </div>
         </div>
+
+        <h3 class="section-kicker">How Attention Changes with Depth</h3>
+        <div class="block-grid" data-block-grid="motionformer-ssv2" data-video="write"></div>
       </div>
     </section>
 
-    <section class="section hero is-light" id="block-depth">
+    <section class="section hero is-light" id="gif-playground">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3 has-text-centered">How Attention Changes with Depth</h2>
+        <h2 class="title is-3 has-text-centered">GIF Playground</h2>
         <p class="section-note has-text-centered">
-          The per-block animation shows a MotionFormer pretrained on
-          Something-Something V2 moving from early diffuse responses toward a
-          sharper motion-oriented representation in deeper blocks.
+          Choose two model/pretrain/video groups. Every block is shown in order.
         </p>
 
-        <div class="block-strip">
-          <div class="gif-card">
-            <img src="static/images/gifs/ssv2_block00.gif" alt="Block 0 DAAM GIF" loading="lazy">
-            <div class="gif-copy">
-              <h3>Block 00</h3>
-              <p>Early local activation.</p>
-            </div>
-          </div>
-          <div class="gif-card">
-            <img src="static/images/gifs/ssv2_block03.gif" alt="Block 3 DAAM GIF" loading="lazy">
-            <div class="gif-copy">
-              <h3>Block 03</h3>
-              <p>Motion evidence begins to organize.</p>
-            </div>
-          </div>
-          <div class="gif-card">
-            <img src="static/images/gifs/ssv2_block07.gif" alt="Block 7 DAAM GIF" loading="lazy">
-            <div class="gif-copy">
-              <h3>Block 07</h3>
-              <p>Trajectory signal becomes more stable.</p>
-            </div>
-          </div>
-          <div class="gif-card">
-            <img src="static/images/gifs/ssv2_block11.gif" alt="Block 11 DAAM GIF" loading="lazy">
-            <div class="gif-copy">
-              <h3>Block 11</h3>
-              <p>Final-layer motion bias is most apparent.</p>
-            </div>
-          </div>
+        <div class="playground-controls" aria-label="Attention GIF comparison controls">
+          <label>
+            <span>Group A</span>
+            <select id="compare-a" class="select-input"></select>
+          </label>
+          <label>
+            <span>Video A</span>
+            <select id="video-a" class="select-input"></select>
+          </label>
+          <label>
+            <span>Group B</span>
+            <select id="compare-b" class="select-input"></select>
+          </label>
+          <label>
+            <span>Video B</span>
+            <select id="video-b" class="select-input"></select>
+          </label>
         </div>
-      </div>
-    </section>
 
-    <section class="hero is-small" id="visualizations">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3 has-text-centered">Attention Patterns Across Architectures</h2>
-          <p class="section-note has-text-centered">
-            Dataset-specific attention patterns persist across representative
-            video models, although their strength and localization vary by
-            architecture.
-          </p>
-
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/ar_2-motionformer.jpg" alt="MotionFormer attention visualizations" loading="lazy">
-              <h2 class="subtitle has-text-centered">MotionFormer</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/ar_2-videomae-k400.jpg" alt="VideoMAE Kinetics-400 attention visualizations" loading="lazy">
-              <h2 class="subtitle has-text-centered">VideoMAE on Kinetics-400</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/ar_2-videomae-ssv2.jpg" alt="VideoMAE Something-Something V2 attention visualizations" loading="lazy">
-              <h2 class="subtitle has-text-centered">VideoMAE on Something-Something V2</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/ar_2-videomaev2.jpg" alt="VideoMAE V2 attention visualizations" loading="lazy">
-              <h2 class="subtitle has-text-centered">VideoMAE V2</h2>
-            </div>
+        <div class="compare-grid">
+          <div>
+            <h3 id="compare-a-title" class="compare-title"></h3>
+            <div id="compare-a-grid" class="block-grid compact"></div>
+          </div>
+          <div>
+            <h3 id="compare-b-title" class="compare-title"></h3>
+            <div id="compare-b-grid" class="block-grid compact"></div>
           </div>
         </div>
       </div>
