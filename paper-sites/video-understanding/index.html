@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="Video Understanding by Design: How Datasets Shape Video Models">
+  <meta name="description" content="A dataset-centric survey explaining how video datasets shape inductive biases and architectural design choices in video understanding models.">
+  <meta name="keywords" content="video understanding, datasets, architectures, transformers, multimodal learning, temporal modeling, spatiotemporal representation, inductive bias">
+  <meta name="author" content="Lei Wang, Syuan-Hao Li, Piotr Koniusz, Yongsheng Gao">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Video Understanding by Design: How Datasets Shape Video Models">
+  <meta property="og:description" content="A dataset-centric perspective on how dataset structure shapes video model design and representational bias.">
+  <meta property="og:image" content="static/images/ar_2-rev_first_fig.jpg">
+  <meta property="og:image:alt" content="Dataset-induced representational biases in video understanding models">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Video Understanding by Design">
+  <meta name="twitter:description" content="How datasets shape video models through structure, inductive bias, and architectural pressure.">
+  <meta name="twitter:image" content="static/images/ar_2-rev_first_fig.jpg">
+
+  <meta name="citation_title" content="Video Understanding by Design: How Datasets Shape Video Models">
+  <meta name="citation_author" content="Wang, Lei">
+  <meta name="citation_author" content="Li, Syuan-Hao">
+  <meta name="citation_author" content="Koniusz, Piotr">
+  <meta name="citation_author" content="Gao, Yongsheng">
+
+  <meta name="theme-color" content="#176b73">
+  <title>Video Understanding by Design</title>
+
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Video Understanding by Design: How Datasets Shape Video Models",
+    "description": "A dataset-centric survey explaining how dataset structure shapes inductive biases and architectural design in video understanding.",
+    "author": [
+      {"@type": "Person", "name": "Lei Wang", "url": "https://leiwangr.github.io/", "affiliation": {"@type": "Organization", "name": "Griffith University"}},
+      {"@type": "Person", "name": "Syuan-Hao Li", "url": "https://hibana2077.com/", "affiliation": {"@type": "Organization", "name": "Griffith University"}},
+      {"@type": "Person", "name": "Piotr Koniusz", "url": "https://www.koniusz.com/", "affiliation": {"@type": "Organization", "name": "University of New South Wales"}},
+      {"@type": "Person", "name": "Yongsheng Gao", "url": "https://experts.griffith.edu.au/19112-yongsheng-gao", "affiliation": {"@type": "Organization", "name": "Griffith University"}}
+    ],
+    "keywords": ["video understanding", "datasets", "architectures", "temporal modeling", "inductive bias"],
+    "abstract": "Research in video understanding has advanced rapidly, driven by increasingly diverse datasets and more powerful model architectures. This survey argues that the evolution of video understanding is fundamentally shaped by dataset structure, connecting dataset properties, inductive biases, and architectural design.",
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                Video Understanding by Design:<br>
+                How Datasets Shape Video Models
+              </h1>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://leiwangr.github.io/" target="_blank" rel="noopener">Lei Wang</a><sup>1</sup></span>
+                <span class="author-block"><a href="https://hibana2077.com/" target="_blank" rel="noopener">Syuan-Hao Li</a><sup>1</sup></span>
+                <span class="author-block"><a href="https://www.koniusz.com/" target="_blank" rel="noopener">Piotr Koniusz</a><sup>2</sup></span>
+                <span class="author-block"><a href="https://experts.griffith.edu.au/19112-yongsheng-gao" target="_blank" rel="noopener">Yongsheng Gao</a><sup>1</sup></span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Griffith University</span>
+                <span class="author-block"><sup>2</sup>University of New South Wales</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <span class="button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-code"></i></span>
+                      <span>Code</span>
+                    </span>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/CompVis/owm-95" target="_blank" rel="noopener" class="button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Dataset</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img
+            class="teaser-image"
+            src="static/images/ar_2-rev_first_fig.jpg"
+            alt="Dataset-induced representational biases across pretraining datasets"
+            loading="eager"
+          >
+          <h2 class="subtitle has-text-centered">
+            The same MotionFormer architecture develops different attention
+            patterns when pretrained on datasets with different structures:
+            context-heavy scenes, motion-centric transformations, and
+            hand-object interactions.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Research in video understanding has advanced rapidly, driven by
+                increasingly diverse datasets and more powerful model
+                architectures. While existing surveys often organize progress by
+                tasks, benchmarks, or model families, they provide limited
+                insight into why particular architectures emerged and succeeded.
+              </p>
+              <p>
+                This survey adopts a dataset-centric perspective: dataset
+                structure shapes model design. Motion complexity, temporal span,
+                compositional hierarchy, multi-agent interaction, and multimodal
+                richness impose distinct learning challenges. These pressures
+                naturally give rise to inductive biases for viewpoint
+                robustness, temporal ordering, long-range dependency modeling,
+                relational reasoning, and cross-modal alignment.
+              </p>
+            </div>
+
+            <div class="key-points">
+              <div class="key-point">
+                <h3>Dataset Properties</h3>
+                <p>Motion, duration, interaction, composition, and modality define the learning signal.</p>
+              </div>
+              <div class="key-point">
+                <h3>Inductive Biases</h3>
+                <p>Models favor different invariances and evidence patterns depending on the data regime.</p>
+              </div>
+              <div class="key-point">
+                <h3>Architectural Response</h3>
+                <p>Model families can be understood as responses to evolving dataset requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dynamic-daam">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Per-Frame Biases as Moving Attention</h2>
+        <p class="section-note has-text-centered">
+          Static DAAM frames become more informative when played over time. The
+          same input clip is shown beside MotionFormer attention maps induced by
+          different pretraining datasets.
+        </p>
+
+        <div class="bias-grid">
+          <div class="gif-card is-source">
+            <img src="static/images/gifs/original_frames.gif" alt="Original sampled video frames" loading="lazy">
+            <div class="gif-copy">
+              <h3>Original Frames</h3>
+              <p>The shared input clip used for the dynamic comparison.</p>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/k600_context_bias.gif" alt="Kinetics-600 context-biased attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Kinetics-600</h3>
+              <p>Attention is pulled toward surrounding objects and scene context.</p>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/ssv2_motion_bias.gif" alt="Something-Something V2 motion-biased attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Something-Something V2</h3>
+              <p>Attention emphasizes the motion trajectory and temporal change.</p>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/ek_interaction_bias.gif" alt="EPIC-KITCHENS-100 interaction-biased attention GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>EPIC-KITCHENS-100</h3>
+              <p>Attention concentrates on hand-object interaction and manipulation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="block-depth">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">How Attention Changes with Depth</h2>
+        <p class="section-note has-text-centered">
+          The per-block animation shows a MotionFormer pretrained on
+          Something-Something V2 moving from early diffuse responses toward a
+          sharper motion-oriented representation in deeper blocks.
+        </p>
+
+        <div class="block-strip">
+          <div class="gif-card">
+            <img src="static/images/gifs/ssv2_block00.gif" alt="Block 0 DAAM GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Block 00</h3>
+              <p>Early local activation.</p>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/ssv2_block03.gif" alt="Block 3 DAAM GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Block 03</h3>
+              <p>Motion evidence begins to organize.</p>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/ssv2_block07.gif" alt="Block 7 DAAM GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Block 07</h3>
+              <p>Trajectory signal becomes more stable.</p>
+            </div>
+          </div>
+          <div class="gif-card">
+            <img src="static/images/gifs/ssv2_block11.gif" alt="Block 11 DAAM GIF" loading="lazy">
+            <div class="gif-copy">
+              <h3>Block 11</h3>
+              <p>Final-layer motion bias is most apparent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small" id="visualizations">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Attention Patterns Across Architectures</h2>
+          <p class="section-note has-text-centered">
+            Dataset-specific attention patterns persist across representative
+            video models, although their strength and localization vary by
+            architecture.
+          </p>
+
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/ar_2-motionformer.jpg" alt="MotionFormer attention visualizations" loading="lazy">
+              <h2 class="subtitle has-text-centered">MotionFormer</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/ar_2-videomae-k400.jpg" alt="VideoMAE Kinetics-400 attention visualizations" loading="lazy">
+              <h2 class="subtitle has-text-centered">VideoMAE on Kinetics-400</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/ar_2-videomae-ssv2.jpg" alt="VideoMAE Something-Something V2 attention visualizations" loading="lazy">
+              <h2 class="subtitle has-text-centered">VideoMAE on Something-Something V2</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/ar_2-videomaev2.jpg" alt="VideoMAE V2 attention visualizations" loading="lazy">
+              <h2 class="subtitle has-text-centered">VideoMAE V2</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Takeaway</h2>
+        <div class="takeaway-box">
+          Aligning model design with dataset structure provides a practical way
+          to explain past video-understanding progress and to design future
+          systems that better handle motion, long-range temporal reasoning,
+          interactions, and multimodal evidence.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+              adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
