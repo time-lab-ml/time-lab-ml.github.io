@@ -1,10 +1,22 @@
 {
   "announcements": [
     {
+      "title": "TIME 2026 Program Schedule Released",
+      "date": "June 17, 2026",
+      "featured": true,
+      "signature": "[TIME 2026 Organizers]",
+      "content": [
+        "We are excited to announce that the program schedule for the TIME 2026 workshop is now available! The schedule features a rich lineup of keynote talks, oral presentations, poster sessions, and panel discussions, offering an excellent platform for sharing research and fostering collaboration. We look forward to welcoming all participants to an engaging and inspiring event."
+      ],
+      "link": {
+        "text": "View Program Schedule →",
+        "url": "program.html"
+      }
+    },
+    {
       "title": "TIME 2026 Paper Awards Announced",
       "date": "March 3, 2026",
       "featured": true,
-      "badge": "New",
       "signature": "[TIME 2026 Award Committee]",
       "content": [
         "The TIME 2026 Award Committee is pleased to announce the recipients of this year's paper awards. The following papers were selected on the basis of scientific contribution, methodological rigor, clarity of presentation, and significance to the workshop's research themes.",
@@ -89,7 +101,7 @@
         ],
         "link": {
           "text": "Meet the Coordinators →",
-          "url": "../index.html#coordinators"
+          "url": "organization.html#workshop-coordinators"
         }
     },
     {
@@ -101,7 +113,7 @@
       ],
       "link": {
         "text": "View Program Committee →",
-        "url": "../index.html#organization"
+        "url": "organization.html#program-committee"
       }
     }
   ]

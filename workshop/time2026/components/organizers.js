@@ -79,7 +79,7 @@ export async function renderOrganizers(containerId, options = {}) {
         ${organizersHtml}
       </div>
 
-      <h3 class="subsection-title" style="margin-top: 3rem;">Workshop Coordinators</h3>
+      <h3 class="subsection-title" id="workshop-coordinators" style="margin-top: 3rem;">Workshop Coordinators</h3>
       <div class="coordinators-grid">
         ${coordinatorsHtml}
       </div>
@@ -89,7 +89,7 @@ export async function renderOrganizers(containerId, options = {}) {
         ${areaChairsHtml}
       </div>
 
-      <h3 class="subsection-title" style="margin-top: 3rem;">Program Committee</h3>
+      <h3 class="subsection-title" id="program-committee" style="margin-top: 3rem;">Program Committee</h3>
       <div class="committee-grid">
         ${programCommitteeHtml}
       </div>

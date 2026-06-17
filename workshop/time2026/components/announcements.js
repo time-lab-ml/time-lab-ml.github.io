@@ -3,9 +3,10 @@
 /**
  * Render a single announcement card
  * @param {Object} announcement - The announcement data
+ * @param {boolean} isLatest - Whether this is the first announcement in the list
  * @returns {string} HTML string for the announcement card
  */
-function renderAnnouncementCard(announcement) {
+function renderAnnouncementCard(announcement, isLatest = false) {
   const featuredClass = announcement.featured ? ' featured' : '';
   
   // Render content paragraphs
@@ -25,9 +26,9 @@ function renderAnnouncementCard(announcement) {
     linkHtml = `<a href="${announcement.link.url}" class="announcement-link"${targetAttr}>${announcement.link.text}</a>`;
   }
 
-  // Render badge if exists
-  const badgeHtml = announcement.badge
-    ? `<span class="announcement-badge">${announcement.badge}</span>`
+  // Automatically mark the first announcement as new.
+  const badgeHtml = isLatest
+    ? '<span class="announcement-badge">New</span>'
     : '';
 
   // Render signature if exists (format: [S1], [S2], etc.)
@@ -56,7 +57,9 @@ function renderAnnouncementCard(announcement) {
  * @returns {string} HTML string for all announcement cards
  */
 function renderAnnouncements(announcements) {
-  return announcements.map(renderAnnouncementCard).join('\n');
+  return announcements
+    .map((announcement, index) => renderAnnouncementCard(announcement, index === 0))
+    .join('\n');
 }
 
 /**
