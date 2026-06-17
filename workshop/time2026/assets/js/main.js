@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ===== Console Welcome Message =====
   console.log('%c🎓 TIME 2026 Workshop', 'color: #2d7a4a; font-size: 24px; font-weight: bold;');
   console.log('%cThe Second International Workshop on Transformative Insights in Multi-faceted Evaluation', 'color: #555; font-size: 14px;');
-  console.log('%cApril 13-14, 2026 | WWW 2026 | Dubai, UAE', 'color: #888; font-size: 12px;');
+  console.log('%cJune 29-July 3, 2026 | WWW 2026 | Dubai, UAE', 'color: #888; font-size: 12px;');
   
   // ===== Performance Monitoring =====
   if ('performance' in window) {
