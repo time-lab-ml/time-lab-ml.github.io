@@ -3,8 +3,8 @@
 /* These are the colors and fonts used throughout the webpage.
  * I've listed them here so that a user may easily
  * do a search-and-replace for these to change the site theme.
- *   'Roboto',sans-serif; Font for the title text
- *   'Roboto-Slab',serif; Font for the body text 
+ *   'Open Sans',sans-serif; Font for the body text
+ *   'TASA Explorer',serif; Font for the title text
  *   #f5faf7; Background color of the site
  *   #1a1a1a; Foreground (text) color of the site
  *   #2d7a4a; TIME 2026 green, current page in navigation, special titles in the Program
@@ -13,7 +13,7 @@
  *   #2d7a4a; Dark Goldenrod, color for links
  */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=TASA+Explorer:wght@400..800&display=swap');
 
 *{
     border:0;
@@ -30,7 +30,7 @@ body{
     background-attachment: fixed;
     color: #1a1a1a; 
     text-align:left;
-    font-family:'Roboto',sans-serif;
+    font-family:'Open Sans',sans-serif;
     font-size:1em;
     line-height:1.5em;
     margin: 60px auto;
@@ -42,7 +42,7 @@ a.current{color: #1f5a35; font-weight: bold;}
 a.current:hover{color: #3a8e59;}
 a:hover{color: #1f5a35;}
 a:active{color: #3a8e59;}
-h1,h2,h3,h4{clear:left; color: #2d7a4a; margin:1.5em 0em 1em 0em; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
+h1,h2,h3,h4{clear:left; color: #2d7a4a; margin:1.5em 0em 1em 0em; font-family:'TASA Explorer',serif; text-shadow: 1px 1px 2px #d0d0d0;}
 h1{font-size:2.67em;}
 h2{font-size:2.00em;}
 h3{font-size:1.67em;}
@@ -81,7 +81,9 @@ th,td{
 /* Website Banner */
 .banner {
     position: relative;
-    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    font-family: 'TASA Explorer', serif;
     max-width: 100%;
     overflow: hidden;
     border-bottom: 4px solid #2d7a4a;
@@ -89,6 +91,7 @@ th,td{
 
 /* Make the image responsive */
 .banner > img {
+    order: 1;
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -114,29 +117,31 @@ th,td{
 
 .top-left {
     box-sizing: border-box;
+    order: 0;
     font-size:5.33em;
     color: #1a1a1a; 
     background: rgba(245,250,247,0.95); 
     text-align: center;
     width: 100%; 
     height: 136px; 
-    position: absolute; 
+    position: relative;
     padding: 36px 0 0 0; 
-    top: 0px;
 }
 
 .bottom-right {
     font-size:2.33em; 
-    color: #f5faf7; 
+    /* color: #2d7a4a; */
+    color: #1f5a35;
     line-height: 1.25em; 
     width: auto; 
     height: auto; 
-    padding: 0px 16px 16px 0px; 
-    text-align: right; 
+    padding: 16px 0px 0px 16px;
+    text-align: left;
     position: absolute; 
-    bottom: 0px; 
-    right: 0px; 
-    text-shadow: 0px 0px 6px #000000;
+    top: 136px;
+    left: 0px;
+    overflow-wrap: break-word;
+    text-shadow: 0px 0px 6px #f5faf7;
 }
 
 .banner-location {
@@ -146,7 +151,7 @@ th,td{
 
 /* Conference Title Logo */
 .title1{color: #1f5a35; text-shadow: 1px 1px 3px #c0c0c0; font-size: 0.5em;}
-.title2{color: #2d7a4a; text-shadow: 1px 1px 3px #c0c0c0; display: block; font-size: 0.22em; line-height: 1.15em; padding: 0 18px;}
+.title2{box-sizing: border-box; color: #2d7a4a; text-shadow: 1px 1px 3px #c0c0c0; display: block; font-size: 0.26em; line-height: 1.15em; padding: 0 18px; overflow-wrap: break-word;}
 .year{color: #1a1a1a; font-size:0.67em; font-weight: lighter;}
 
 /* Navigation Links (Home, Registration, etc) */
@@ -161,8 +166,8 @@ td.sponsor img{width: 100%}
 /* The Table on the Program Page */
 td.room{padding: 4px 12px 4px 4px; width: 90%; vertical-align:bottom; font-size:1.67em; color: #2d7a4a; height:32px;}
 td.date{white-space:nowrap; width:130px; text-align:right; vertical-align:top; padding:4px 16px 0px 0px;}
-td.title{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.5em; color: #2d7a4a; height:32px; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0; }
-td.title-special{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.67em; color: #2d7a4a; height:32px; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
+td.title{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.5em; color: #2d7a4a; height:32px; font-family:'TASA Explorer',serif; text-shadow: 1px 1px 2px #d0d0d0; }
+td.title-special{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.67em; color: #2d7a4a; height:32px; font-family:'TASA Explorer',serif; text-shadow: 1px 1px 2px #d0d0d0;}
 td.speaker{padding: 4px 12px 4px 4px; font-style: italic; font-size:1em; max-height:999999px}
 td.abstract{padding: 4px 12px 12px 4px; font-size:1em; max-height:999999px}
 td.abstract img{display: block; margin: 4px auto 8px auto}
@@ -236,12 +241,8 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     text-transform: uppercase;
 }
 
-.schedule-table tr:nth-child(even) {
+.schedule-table tr.session-highlight {
     background-color: #eef6f0;
-}
-
-.schedule-table tr:hover {
-    background-color: #e8f4ec;
 }
 
 .schedule-table td {
@@ -523,6 +524,9 @@ box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
         height: 132px;
         padding-top: 32px;
     }
+    .bottom-right {
+        top: 132px;
+    }
     table.navigation {
         display: block;
         overflow-x: auto;
@@ -553,10 +557,18 @@ box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
         gap: 8px;
         margin-bottom: 8px;
     }
+    .title2 {
+        font-size: 0.22em;
+        padding: 0 6px;
+    }
     .bottom-right {
-        font-size: 1.2em;
+        font-size: 1.05em;
         line-height: 1.2em;
-        padding: 0 10px 10px 10px;
+        box-sizing: border-box;
+        width: 100%;
+        top: 132px;
+        left: 0;
+        padding: 10px 10px 0 10px;
         max-width: 100%;
     }
     .banner-location {
