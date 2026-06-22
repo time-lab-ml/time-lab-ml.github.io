@@ -1445,6 +1445,72 @@ strong {
   font-size: 0.92rem;
 }
 
+.panel-subtitle {
+  display: block;
+  margin-top: -0.2rem;
+  padding-bottom: 0.15rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.panel-session-detail {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: var(--spacing-sm);
+  padding: 0.9rem 1rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+}
+
+.panel-theme-label,
+.panel-activity-label {
+  width: fit-content;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-white);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.panel-theme-title {
+  color: var(--color-primary);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.panel-activity-label {
+  margin-top: 0.15rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.panel-activity-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding-left: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  list-style: none;
+}
+
+.panel-activity-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.45rem;
+  padding-left: 0;
+}
+
+.panel-activity-list li::before {
+  content: "-";
+}
+
 .poster-session-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
