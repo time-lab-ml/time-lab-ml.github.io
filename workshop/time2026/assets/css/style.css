@@ -1993,10 +1993,14 @@ html {
 }
 
 /* Dates Grid */
+.section-dates .content-card {
+  padding: var(--spacing-lg);
+}
+
 .dates-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
 }
 
@@ -2009,6 +2013,7 @@ html {
   border-radius: var(--radius-md);
   border-left: 4px solid var(--color-primary);
   transition: var(--transition-base);
+  min-width: 0;
 }
 
 .date-card:hover {
@@ -2035,6 +2040,10 @@ html {
 .date-icon {
   font-size: 2rem;
   flex-shrink: 0;
+}
+
+.date-info {
+  min-width: 0;
 }
 
 .date-info h4 {
@@ -2066,9 +2075,31 @@ html {
   border-radius: var(--radius-sm);
 }
 
+@media (min-width: 1025px) {
+  .section-dates .date-card {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+
+  .section-dates .date-icon {
+    font-size: 1.75rem;
+  }
+
+  .section-dates .date-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .section-dates .date-value {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+}
+
 @media (max-width: 1024px) {
   .dates-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
   }
 }
 
