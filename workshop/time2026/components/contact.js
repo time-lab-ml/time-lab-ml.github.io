@@ -23,7 +23,7 @@ export async function renderContact(containerId, options = {}) {
           <h4>Websites</h4>
           <p class="contact-info">
             <strong>Workshop Website:</strong><br>
-            <a href="${site.websites.workshop}" target="_blank">${site.websites.workshop.replace('https://', '')}</a>
+            <a href="${site.websites.workshop}" target="_blank">TIME 2026 Workshop</a>
           </p>
           <p class="contact-info">
             <strong>WWW 2026 Conference:</strong><br>

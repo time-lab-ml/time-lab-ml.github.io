@@ -1371,20 +1371,43 @@ strong {
 }
 
 /* Program Schedule */
+.program-overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.program-overview-card > p {
+  margin-bottom: 0;
+}
+
+.program-overview-card .lead {
+  line-height: 1.65;
+}
+
 .delivery-format-list {
-  margin: 0.35rem 0 0 var(--spacing-md);
+  margin: 0 0 0 var(--spacing-md);
   padding-left: var(--spacing-lg);
+}
+
+.program-overview-card .delivery-format-list {
+  margin-top: -0.35rem;
 }
 
 .delivery-format-list li {
   padding-left: 0.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.delivery-format-list li:last-child {
+  margin-bottom: 0;
 }
 
 .program-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-lg);
+  gap: 0.75rem;
+  margin-top: 0;
 }
 
 .program-meta span {
