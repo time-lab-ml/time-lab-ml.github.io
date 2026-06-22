@@ -1371,6 +1371,15 @@ strong {
 }
 
 /* Program Schedule */
+.delivery-format-list {
+  margin: 0.35rem 0 0 var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+.delivery-format-list li {
+  padding-left: 0.15rem;
+}
+
 .program-meta {
   display: flex;
   flex-wrap: wrap;
