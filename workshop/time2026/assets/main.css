@@ -250,6 +250,17 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     vertical-align: top;
 }
 
+.schedule-table th:first-child,
+.schedule-table td:first-child {
+    width: 96px;
+    white-space: nowrap;
+}
+
+.schedule-table th:nth-child(3) {
+    width: 230px;
+    white-space: nowrap;
+}
+
 .schedule-table ul {
     width: auto;
     margin: 10px 0 0 20px;
@@ -329,6 +340,12 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
 }
 
 @media screen and (max-width: 600px) {
+    .schedule-table th:first-child,
+    .schedule-table td:first-child,
+    .schedule-table th:nth-child(3) {
+        width: auto;
+        white-space: normal;
+    }
     .schedule-table, .schedule-table tbody, .schedule-table tr, .schedule-table td, .schedule-table th {
         display: block;
     }
