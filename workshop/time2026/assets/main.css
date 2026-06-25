@@ -51,6 +51,7 @@ p{margin:1% auto 1% auto; padding:0px; width:90%; text-align:left;text-align: ju
 li a, p a {text-decoration:underline; text-decoration-color:#2d7a4a;}
 ul{list-style:none; margin:24px auto 24px auto; padding:0px; width:800px; text-align:left;}
 ul li{list-style: circle; margin:0; text-align:left;}
+li.panelist-list{list-style-type: disc;}
 i,em{font-style:italic;}
 b,strong{font-weight:bold;}
 sup{
