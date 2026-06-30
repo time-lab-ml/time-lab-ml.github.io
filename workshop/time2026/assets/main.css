@@ -469,6 +469,14 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     width: 100%;
 }
 
+.news-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 12px auto 0 auto;
+    border-radius: 6px;
+}
+
 .news-item:hover {
 transform: translateY(-1px);
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
