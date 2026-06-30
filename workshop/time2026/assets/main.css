@@ -302,6 +302,15 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     margin-top: 8px;
 }
 
+.panel-cover-image {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: 12px auto 0 auto;
+    border-radius: 6px;
+}
+
 .meta-list {
     width: 90%;
     margin: 18px auto 24px auto;
