@@ -79,6 +79,17 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <dialog id="lightbox" class="lightbox" aria-label="Figure preview">
+    <button type="button" class="lightbox-close" data-close aria-label="Close preview">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="lightbox-image" src="" alt="">
+    <div class="lightbox-caption">
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-text"></p>
+    </div>
+  </dialog>
+
   <main id="main-content">
     <section class="hero publication-header">
       <div class="hero-body">
@@ -112,8 +123,8 @@
                   </span> -->
                   <span class="link-block">
                     <a href="static/coding_files.zip" download class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-code"></i></span>
-                      <span>Code</span>
+                      <span class="icon"><i class="fas fa-table"></i></span>
+                      <span>Coding Sheet</span>
                     </a>
                   </span>
                 </div>
@@ -187,6 +198,116 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="taxonomy">
+      <div class="container is-max-widescreen">
+        <span class="act-label has-text-centered" style="text-align:center">Act 1 &mdash; The framework</span>
+        <h2 class="title is-3 has-text-centered">Five-Dimension Taxonomy Explorer</h2>
+        <p class="section-note has-text-centered">
+          Every benchmark is decomposed into five structural dimensions, each
+          coded from its own sub-variables under a fixed rubric. Pick an anchor
+          benchmark to see where it lands.
+        </p>
+
+        <div class="chip-bar" id="taxonomy-chips" role="group" aria-label="Anchor datasets"></div>
+
+        <div class="explorer-grid">
+          <div class="radar-panel">
+            <div id="taxonomy-radar"></div>
+            <p class="radar-scale-note">
+              Each axis sums its sub-variables, normalised to 0&ndash;4. The
+              codes are reproduced verbatim from the survey&rsquo;s coding;
+              only the weighting into a scalar is ours.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="dataset-name" id="taxonomy-name"></h3>
+            <div class="meta-row" id="taxonomy-meta"></div>
+            <div id="taxonomy-codes"></div>
+            <div class="dataset-note" id="taxonomy-note"></div>
+          </div>
+        </div>
+
+        <h3 class="section-kicker">What the structure looks like in the raw data</h3>
+        <div class="figure-grid is-thirds">
+          <figure class="figure-card">
+            <img src="static/images/paper/fig2_motion.jpg" alt="UCF101 skateboarding frames above four Diving48 dive categories that differ only in rotation and posture" loading="lazy">
+            <div class="figure-copy">
+              <span class="figure-tag">Motion</span>
+              <h3>Magnitude vs. fine-grained dependence</h3>
+              <p>UCF101 is recognisable from global spatiotemporal patterns. Diving48 categories differ only in body rotation, posture and execution order.</p>
+            </div>
+          </figure>
+          <figure class="figure-card">
+            <img src="static/images/paper/fig4b_ek100.jpg" alt="EPIC-KITCHENS-100 egocentric frames showing continuous hand-object interaction" loading="lazy">
+            <div class="figure-copy">
+              <span class="figure-tag">Relational</span>
+              <h3>Egocentric hand&ndash;object interaction</h3>
+              <p>EPIC-KITCHENS-100: a moving first-person camera and continuous manipulation make human&ndash;object relations task-critical.</p>
+            </div>
+          </figure>
+          <figure class="figure-card">
+            <img src="static/images/paper/fig4c_charadesego.jpg" alt="Charades-Ego paired third-person and egocentric clips of everyday activities" loading="lazy">
+            <div class="figure-copy">
+              <span class="figure-tag">Viewpoint</span>
+              <h3>Paired ego / third-person</h3>
+              <p>Charades-Ego records the same overlapping everyday actions from both viewpoints, making viewpoint variability an explicit variable.</p>
+            </div>
+          </figure>
+          <figure class="figure-card is-strip">
+            <img src="static/images/paper/fig3a_semantic.jpg" alt="Kinetics-400 label taxonomy tree grouping dribbling, dunking and shooting under ball sports" loading="lazy">
+            <div class="figure-copy">
+              <span class="figure-tag">Compositional</span>
+              <h3>Semantic hierarchy</h3>
+              <p>Kinetics-400 organises labels taxonomically. The hierarchy structures the label space, not the timeline.</p>
+            </div>
+          </figure>
+          <figure class="figure-card is-strip">
+            <img src="static/images/paper/fig3b_procedural.jpg" alt="Breakfast dataset sequence: take bowl, pour cereals, pour milk, stir cereals" loading="lazy">
+            <div class="figure-copy">
+              <span class="figure-tag">Compositional</span>
+              <h3>Procedural hierarchy</h3>
+              <p>Breakfast decomposes one activity into ordered sub-actions. This one introduces temporal dependencies between constituents.</p>
+            </div>
+          </figure>
+          <figure class="figure-card is-strip">
+            <img src="static/images/paper/fig4a_mpii.jpg" alt="MPII Cooking 2 third-person static camera frames of a cooking procedure" loading="lazy">
+            <div class="figure-copy">
+              <span class="figure-tag">Temporal</span>
+              <h3>Long procedural span</h3>
+              <p>MPII Cooking 2 holds the camera still and lets the activity run long, isolating temporal span from viewpoint change.</p>
+            </div>
+          </figure>
+        </div>
+
+        <h3 class="section-kicker">The hook</h3>
+        <div class="takeaway-box">
+          WebVid-10M and Ego4D are both &ldquo;video + text&rdquo;. WebVid is
+          coded <code>C/w/s</code>: coarse alignment, weak pairing, sparse
+          grounding. Ego4D is coded <code>D/v/d</code>: dense alignment,
+          verified pairing, dense grounding. Ten million weakly captioned clips
+          score <strong>1.3&nbsp;/&nbsp;4</strong> on the multimodal axis;
+          Ego4D scores <strong>4.0</strong>. Modality availability is not
+          multimodal structure &mdash; which is exactly why a single
+          &ldquo;multimodal&rdquo; label cannot predict what a model has to learn.
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <span class="act-label has-text-centered" style="text-align:center">Act 2 &mdash; The qualitative evidence</span>
+        <h2 class="title is-3 has-text-centered">Structure Leaves a Trace in Attention</h2>
+        <p class="section-note has-text-centered" style="margin-bottom:0">
+          If dataset structure really is the driver, then holding the
+          architecture fixed and changing only the pretraining corpus should
+          change what the model looks at. It does. The attention maps below are
+          from identical architectures that differ only in the dataset they were
+          pretrained on.
+        </p>
       </div>
     </section>
 
@@ -309,15 +430,43 @@
       </div>
     </section>
 
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Takeaway</h2>
-        <div class="takeaway-box">
-          Aligning model design with dataset structure provides a practical way
-          to explain past video-understanding progress and to design future
-          systems that better handle motion, long-range temporal reasoning,
-          interactions, and multimodal evidence.
+    <section class="section" id="coevolution">
+      <div class="container is-max-widescreen">
+        <span class="act-label has-text-centered" style="text-align:center">Act 3 &mdash; The historical and quantitative evidence</span>
+        <h2 class="title is-3 has-text-centered">Benchmark &harr; Architecture Co-evolution</h2>
+        <p class="section-note has-text-centered">
+          Datasets above the axis, architecture families below. Hover or tap a
+          benchmark to trace what it is associated with &mdash; and how that
+          association is supported.
+        </p>
+
+        <div class="timeline-legend">
+          <span><i class="legend-swatch is-introduced"></i> <strong>I</strong>&nbsp;&mdash; family introduced on this benchmark</span>
+          <span><i class="legend-swatch is-evaluated"></i> <strong>E</strong>&nbsp;&mdash; commonly evaluated on it</span>
+          <span><i class="legend-swatch is-retrospective"></i> <strong>R</strong>&nbsp;&mdash; retrospective, <em>not</em> evidence of causation</span>
         </div>
+
+        <div class="timeline-scroll">
+          <div id="coevolution-timeline"></div>
+        </div>
+
+        <div class="timeline-detail" id="timeline-detail"></div>
+
+        <h3 class="section-kicker">Not just a narrative: matched comparisons</h3>
+        <p class="section-note">
+          Reported accuracies aggregate publications that differ in pretraining
+          corpus, capacity and evaluation protocol, so they can only be read
+          descriptively. These two cases hold one group of factors roughly fixed
+          while another varies. They are associational, not controlled; the
+          residual confounds are stated.
+        </p>
+
+        <div class="matched-tabs" id="matched-tabs" role="group" aria-label="Matched comparison cases">
+          <button type="button" class="chip is-active" data-case="case3" aria-pressed="true">Case 3 &middot; motion magnitude does not order difficulty</button>
+          <button type="button" class="chip" data-case="case1" aria-pressed="false">Case 1 &middot; the K400&ndash;SSv2 gap never closes</button>
+        </div>
+
+        <div class="matched-panel" id="matched-chart"></div>
       </div>
     </section>
 
