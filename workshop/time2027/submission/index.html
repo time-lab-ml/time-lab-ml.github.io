@@ -43,81 +43,153 @@
 
             <ul class="dates">
                 <li class="key"><span class="label">Workshop Paper Submission Deadline</span><span class="date">January 4, 2027 (AoE)</span></li>
-                <li><span class="label">Workshop Paper Notification</span><span class="date">February 1, 2027</span></li>
-                <li><span class="label">Workshop Paper Camera-Ready</span><span class="date">February 16, 2027</span></li>
-                <li><span class="label">Main Conference (Dublin)</span><span class="date">May 10&ndash;14, 2027</span></li>
+                <li><span class="label">Workshop Paper Notification</span><span class="date">February 1, 2027 (AoE)</span></li>
+                <li><span class="label">Workshop Paper Camera-Ready Deadline</span><span class="date">February 16, 2027 (AoE)</span></li>
+                <li><span class="label">The Web Conference 2027</span><span class="date">May 10&ndash;14, 2027, Dublin, Ireland</span></li>
             </ul>
 
-            <p class="note">All submission deadlines are end-of-day in the <a href="https://time.is/Anywhere_on_Earth" target="_blank" rel="noopener">Anywhere on Earth (AoE)</a> time zone.</p>
-
-            <h2>Submission Information</h2>
-
-            <p>We invite researchers and practitioners to submit original, unpublished research papers addressing contemporary challenges in web technologies, responsible AI, trustworthy AI, and evaluation methodologies.</p>
-
-            <p><strong>Submission Requirements:</strong> Submissions must adhere to the following guidelines:</p>
-
-            <ul class="info-list">
-                <li><strong>Format:</strong> ACM double-column English template. Long papers: 8 pages plus references and an optional appendix (12 pages maximum); short papers: 4 pages including references and appendix.</li>
-                <li><strong>Review:</strong> Submissions will undergo a double-blind peer review process by expert reviewers.</li>
-                <li><strong>Platform:</strong> TIME 2027 uses OpenReview for submissions and reviews.</li>
-                <li><strong>Publication:</strong> Accepted papers will be included in the WWW 2027 Companion Proceedings, subject to meeting the camera-ready timeline.</li>
-            </ul>
+            <p class="note">All deadlines are in the <a href="https://time.is/Anywhere_on_Earth" target="_blank" rel="noopener">Anywhere on Earth (AoE)</a> time zone. The submission portal will open soon; access details will be announced separately.</p>
 
             <div class="button-row">
                 <span class="button is-disabled" aria-disabled="true">Submit on OpenReview <span class="tbd">TBD</span></span>
-                <span class="button secondary is-disabled" aria-disabled="true">Download CFP (PDF) <span class="tbd">TBD</span></span>
+                <a class="button secondary" href="https://leiwangr.github.io/files/time27-workshop.pdf" target="_blank" rel="noopener">Download CFP (PDF)</a>
                 <a class="button secondary" href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty" target="_blank" rel="noopener">ACM LaTeX Template</a>
             </div>
 
             <h2>Call for Papers</h2>
 
-            <p>The rapid evolution of Web AI is fundamentally reshaping how we evaluate intelligent systems. As foundation models, multimodal generative AI, retrieval-augmented systems, and autonomous AI agents transition from controlled benchmarks into real-world Web environments, powering search, recommendation, social platforms, and knowledge systems, conventional single-score accuracy metrics are no longer sufficient. At the same time, failures such as hallucination, bias, unsafe generation, privacy leakage, and unreliable tool use carry substantial real-world consequences.</p>
+            <div class="callout">
+                <p><strong>The central question:</strong> How should we evaluate Web AI systems when capability alone is not enough? TIME 2027 invites work that moves beyond headline scores to examine how modern AI systems perform, adapt, fail, and affect people in realistic settings.</p>
+            </div>
 
-            <p>TIME 2027 invites original contributions addressing the multi-faceted evaluation of emerging Web AI technologies. By bringing together complementary perspectives across Web research, machine learning, security, privacy, and human-centred AI, the workshop seeks to establish evaluation methodologies that are rigorous, reproducible, and aligned with real-world deployment.</p>
+            <p>Foundation models, generative and multimodal AI, retrieval-augmented generation (RAG), and AI agents are rapidly reshaping search, recommendation, knowledge access, and other Web applications. Yet their performance cannot be captured by task accuracy alone. Systems may produce convincing but incorrect answers, fail when information changes, misuse tools, behave inconsistently across users or contexts, or introduce safety, privacy, and fairness risks.</p>
 
-            <h3 class="sub">Themes and Topics</h3>
+            <p>The 3rd International Workshop on Transformative Insights in Multi-faceted Evaluation (TIME 2027) brings together researchers and practitioners to advance rigorous, responsible, and actionable evaluation of these emerging Web AI systems. Building on the <a href="../../time2025/">TIME 2025</a> and <a href="../../time2026/">TIME 2026</a> workshops, this edition places particular emphasis on foundation models, multimodal and generative systems, RAG, and agentic Web applications.</p>
 
-            <p>We welcome submissions across the following interconnected themes and topics (including, but not limited to):</p>
+            <p>We seek to move evaluation beyond static benchmarks and single headline metrics toward evidence about how systems behave in realistic, interactive, and changing environments. We welcome work that examines not only what AI systems can do, but also how reliably, robustly, safely, fairly, transparently, and efficiently they do it, and whether their outcomes deliver meaningful real-world utility. Contributions that offer reproducible methods, reveal important failure modes, or translate evaluation evidence into practical recommendations are especially encouraged.</p>
+
+            <p>TIME 2027 welcomes perspectives from Web research, information retrieval, machine learning, multimodal learning, responsible AI, security, privacy, and human-centred AI. Our goal is to build an interdisciplinary community around a shared challenge: making the evaluation of modern Web AI more meaningful, comprehensive, and useful in practice.</p>
+
+            <h3 class="sub">Topics of Interest</h3>
+
+            <p>Topics include, but are not limited to, the following areas:</p>
 
             <div class="table-wrap">
             <table class="topic-table">
                 <thead>
-                    <tr><th scope="col">Theme</th><th scope="col">Topics</th></tr>
+                    <tr><th scope="col">Area</th><th scope="col">Topics</th></tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Emerging Web AI Systems</td>
-                        <td>Evaluation of foundation models, Large Language Models (LLMs), multimodal and generative AI, Retrieval-Augmented Generation (RAG), autonomous Web agents, tool-using systems, and AI-driven search, recommendation, and knowledge platforms.</td>
+                        <td>1. Foundation Models and Generative AI</td>
+                        <td><ul>
+                            <li>Capability assessment across tasks, domains, and user needs; factuality, hallucination, and evidence-grounded generation.</li>
+                            <li>Robustness, generalisation, failure analysis, and evaluation under distribution shift.</li>
+                            <li>Multi-dimensional assessment beyond aggregate scores and conventional task metrics.</li>
+                        </ul></td>
                     </tr>
                     <tr>
-                        <td>Trustworthiness, Safety &amp; Reliability</td>
-                        <td>Factuality and hallucination analysis, robustness under distribution shift, uncertainty estimation, model calibration, AI safety, cybersecurity, adversarial resilience, and privacy leakage assessment.</td>
+                        <td>2. Multimodal AI and Web Systems</td>
+                        <td><ul>
+                            <li>Evaluation of systems that integrate text, images, video, audio, and other modalities.</li>
+                            <li>Cross-modal consistency, alignment, reasoning, and generation quality.</li>
+                            <li>Performance and reliability under heterogeneous inputs and changing Web content.</li>
+                        </ul></td>
                     </tr>
                     <tr>
-                        <td>Human-Centred &amp; Responsible AI</td>
-                        <td>Fairness and bias mitigation, interpretability and explainability, human-centred and user-centric evaluation methodologies, and cross-cultural or cross-domain generalisation.</td>
+                        <td>3. Retrieval-Augmented Systems and AI Agents</td>
+                        <td><ul>
+                            <li>RAG evaluation, information grounding, retrieval quality, and source attribution.</li>
+                            <li>Agent planning, tool use, multi-step execution, error recovery, and long-horizon tasks.</li>
+                            <li>Behaviour in interactive Web environments with incomplete, conflicting, or evolving information.</li>
+                        </ul></td>
                     </tr>
                     <tr>
-                        <td>Benchmarks, Rigor &amp; Real-World Utility</td>
-                        <td>Benchmark and dataset design, annotation quality, reproducibility protocols, open evaluation tools, computational efficiency and sustainability, and evaluation in real-world deployment settings.</td>
+                        <td>4. Trustworthy, Responsible, and Human-Centred Evaluation</td>
+                        <td><ul>
+                            <li>Safety, security, privacy, fairness, bias, and societal impact.</li>
+                            <li>Interpretability, transparency, uncertainty quantification, and calibration.</li>
+                            <li>Human-centred evaluation, usability, real-world utility, and cross-cultural or cross-domain differences.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td>5. Benchmarks, Metrics, and Reproducible Methodologies</td>
+                        <td><ul>
+                            <li>Evaluation frameworks, metrics, protocols, test suites, and benchmark design.</li>
+                            <li>Dataset quality, annotation reliability, validity, reproducibility, and statistical rigour.</li>
+                            <li>Open evaluation tools, transparent reporting, and cross-domain assessment.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td>6. Efficiency, Deployment, and Emerging Challenges</td>
+                        <td><ul>
+                            <li>Computational cost, latency, scalability, and sustainability.</li>
+                            <li>Evaluation, auditing, and monitoring in real-world deployment.</li>
+                            <li>Trade-offs among capability, reliability, safety, cost, and user utility; industry lessons, negative results, and overlooked failure modes.</li>
+                        </ul></td>
                     </tr>
                 </tbody>
             </table>
             </div>
 
+            <h3 class="sub">What Contributions Are We Looking For?</h3>
+
+            <p>We encourage a broad range of submissions that deepen understanding of AI evaluation, including:</p>
+
+            <ul>
+                <li><strong>Research papers</strong> presenting novel evaluation methods, empirical studies, or systematic investigations.</li>
+                <li><strong>Surveys and systematic reviews</strong> synthesising progress, exposing gaps, and identifying future directions.</li>
+                <li><strong>Benchmark and metric analyses</strong> examining the strengths, limitations, and validity of current evaluation practices.</li>
+                <li><strong>Evaluation frameworks and tools</strong> enabling practical, transparent, and reproducible assessment.</li>
+                <li><strong>Negative results and failure analyses</strong> revealing weaknesses, risks, and failure modes that conventional evaluation may overlook.</li>
+                <li><strong>Position papers and industry case studies</strong> proposing research priorities or sharing lessons from real-world use and deployment.</li>
+            </ul>
+
+            <p>We particularly value contributions that go beyond reporting a performance gain to explain what an evaluation reveals, why it matters, and how it can inform better research or deployment decisions. Papers introducing a model or application are welcome when they include substantial, systematic evaluation relevant to the workshop.</p>
+
+            <h2>Submission Requirements</h2>
+
+            <p>TIME 2027 will use <a href="https://openreview.net/" target="_blank" rel="noopener">OpenReview</a> for paper submissions and the review process. The submission portal will open soon, and the direct venue link will be announced separately. All papers must be written in English and use the ACM conference double-column template. Submissions will be evaluated through a double-blind peer-review process; authors must anonymise their papers and follow the detailed instructions provided when the portal opens.</p>
+
+            <ul class="info-list">
+                <li><strong>Long papers:</strong> up to 8 pages of paper content, plus references and an optional appendix, with a maximum total length of 12 pages.</li>
+                <li><strong>Short papers:</strong> up to 4 pages in total, including references and any appendix.</li>
+                <li><strong>Review:</strong> double-blind expert peer review; see <a href="#review-process">Review Process and Publication</a> for the review stages.</li>
+                <li><strong>Publication:</strong> accepted papers will be included in the WWW 2027 Companion Proceedings, subject to compliance with the camera-ready deadline and applicable ACM publication requirements.</li>
+            </ul>
+
+            <p>All submissions should present original work, comply with relevant research-ethics requirements and applicable ACM policies, and clearly explain the evaluation question, methodology, findings, and significance to the TIME 2027 scope. Papers will be assessed for relevance, technical quality, clarity, methodological rigour, and the value of the evaluation insights they offer. Accepted contributions may be presented orally or as posters, as appropriate.</p>
+
+            <h2 id="review-process">Review Process and Publication</h2>
+
+            <p>Building on the process used for TIME 2025 and TIME 2026, TIME 2027 will use a multi-stage, double-blind review process designed to support rigorous, constructive, and fair evaluation.</p>
+
+            <ol class="objectives">
+                <li><strong>Initial screening.</strong> The Program Chairs will check submissions for completeness and compliance with the required format and page limits. Submissions passing this screening will undergo automated checks for AI-generated content and potential reference hallucinations.</li>
+                <li><strong>Expert review and author response.</strong> Submissions passing the initial checks will be reviewed by at least three expert reviewers, including at least one reviewer from industry. Preliminary review results will be shared with authors, including reviewer comments, AI-checking reports, and Program Chair feedback on formatting. Authors will have an opportunity to respond to the feedback and revise their submissions.</li>
+                <li><strong>Area Chair assessment and final decisions.</strong> Area Chairs will assess revised submissions by considering reviewer comments and ratings, the paper&rsquo;s strengths and contributions, its relevance to the workshop, and the authors&rsquo; responses. The Program Chairs will make the final decisions based on the reviews, Area Chair recommendations, overall paper quality, and fit with TIME 2027.</li>
+            </ol>
+
+            <p><strong>Paper awards.</strong> High-quality papers recommended by the Area Chairs will be considered by the Award Committee for the workshop&rsquo;s Best Paper and other paper awards.</p>
+            <p><strong>Publication.</strong> Accepted papers will be included in the WWW 2027 Companion Proceedings, subject to meeting the camera-ready timeline and applicable ACM publication requirements. For examples of previous editions, see the ACM Digital Library collections for <a href="https://dl.acm.org/doi/proceedings/10.1145/3701716" target="_blank" rel="noopener">TIME 2025</a> and <a href="https://dl.acm.org/doi/proceedings/10.1145/3774905" target="_blank" rel="noopener">TIME 2026</a>.</p>
+
             <h2>Author Guidelines</h2>
 
-            <p><strong>Formatting Requirements:</strong> Submissions must be in English, in double-column format, and must adhere to the <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM template and format</a> (also available in <a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty" target="_blank" rel="noopener">Overleaf</a>). Word users may use the Word Interim Template, and the recommended setting for LaTeX is:</p>
+            <p><strong>Formatting Requirements:</strong> Submissions must be a single PDF file in English, in double-column format, and must adhere to the <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM template and format</a> (also available in <a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty" target="_blank" rel="noopener">Overleaf</a>). Word users may use the Word Interim Template, and the recommended setting for LaTeX is:</p>
             <pre><code>\documentclass[sigconf, anonymous, review]{acmart}</code></pre>
-            <p>Submissions must be a single PDF file:</p>
-            <ul class="info-list">
-                <li><strong>Long papers:</strong> 8 (eight) pages for the main paper, with additional pages for references and an optional appendix (e.g. details on reproducibility, proofs, pseudo-code), up to a maximum of 12 (twelve) pages in total. The first 8 pages should be self-contained, since reviewers are not required to read past them.</li>
-                <li><strong>Short papers:</strong> 4 (four) pages, including references and the optional appendix.</li>
-            </ul>
-            <p><strong>Double-Blind Review Policy:</strong> Paper submissions must conform to the double-blind review policy, meaning that authors should omit their names and affiliations from the paper. All papers will be peer-reviewed by experts in the field. Acceptance will be based on relevance to the workshop, scientific novelty, and technical quality.</p>
+            <p><strong>Double-Blind Review Policy:</strong> Paper submissions must conform to the double-blind review policy, meaning that authors should omit their names and affiliations from the paper.</p>
             <p><strong>AI-Generated Content Disclosure:</strong> Authors are required to disclose any use of tools such as ChatGPT or other AI-based systems in the creation of the paper, including text generation, analysis, or other content. If AI tools are used, authors must provide proper attribution and use the tools ethically. AI tools should not be listed as authors; only human contributors should be credited as authors.</p>
             <p><strong>OpenReview Profile Completion:</strong> Anyone who plans to submit a paper as an author or co-author must create or update their OpenReview profile by the paper submission deadline. Complete profiles are required for assignment and conflict detection. Papers with authors who have not completed their profiles may be desk-rejected.</p>
             <p><strong>Exceptions and Accommodations:</strong> Deadlines and policies will be strictly enforced. There will be no exceptions or accommodations for late submissions, misconfigured author or co-author accounts on OpenReview, or changes to author lists after the paper submission deadline.</p>
+
+            <h2>Why TIME at The Web Conference?</h2>
+
+            <p>The Web is both a major setting for modern AI and a demanding environment in which to evaluate it. Information changes continuously, users have diverse needs, evidence may be incomplete or contradictory, and AI systems increasingly interact with external tools and carry out multi-step tasks. These conditions expose limitations that static benchmarks and isolated scores can miss.</p>
+            <p>TIME 2027 complements The Web Conference by bringing together communities that study AI capability, Web-scale information, trustworthy systems, and human experience. Through research presentations and interdisciplinary discussion, the workshop aims to identify shared evaluation challenges, strengthen practical evaluation methods, and help shape a more reliable, responsible, and human-centred future for Web AI.</p>
+
+            <div class="callout">
+                <p><strong>We invite the community to help rethink how modern Web AI should be evaluated.</strong></p>
+            </div>
         </main>
 
         <aside class="sidebar" aria-label="Key information">
@@ -136,7 +208,7 @@
                 <ul class="side-links">
                     <li><span class="is-disabled" aria-disabled="true">Submit on OpenReview <span class="tbd">TBD</span></span></li>
                     <li><a href="../submission/">Call for Papers</a></li>
-                    <li><span class="is-disabled" aria-disabled="true">Download CFP (PDF) <span class="tbd">TBD</span></span></li>
+                    <li><a href="https://leiwangr.github.io/files/time27-workshop.pdf" target="_blank" rel="noopener">Download CFP (PDF)</a></li>
                     <li><a href="../program/">Program Schedule</a></li>
                     <li><a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty" target="_blank" rel="noopener">ACM LaTeX Template</a></li>
                 </ul>

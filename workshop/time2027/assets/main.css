@@ -354,6 +354,8 @@ table { width: 100%; margin: 16px 0 24px; border-collapse: collapse; border: 1px
 th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 thead th { background: var(--ocean-50); color: var(--ocean-800); font-size: 14px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-bottom: 2px solid var(--ocean-600); }
 .topic-table td:first-child { width: 32%; font-weight: 700; color: var(--ocean-800); }
+.topic-table ul { margin: 0; padding-left: 18px; }
+.topic-table li { margin: 2px 0; }
 
 .schedule td.time { width: 104px; white-space: nowrap; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ocean-800); }
 .schedule td.chair { width: 180px; color: var(--muted); font-size: 15px; }
