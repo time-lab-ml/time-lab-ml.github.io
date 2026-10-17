@@ -132,7 +132,7 @@ code {
     border-radius: 14px;
 }
 .brand-name { display: block; font-size: 32px; font-weight: 800; line-height: 1.1; }
-.brand-sub { display: block; max-width: 560px; color: var(--ocean-100); font-size: 15px; line-height: 1.4; }
+.brand-sub { display: block; max-width: 720px; color: var(--ocean-100); font-size: 15px; line-height: 1.4; }
 .venue { text-align: right; font-size: 16px; line-height: 1.45; }
 .venue strong { display: block; font-size: 18px; }
 .venue span { color: var(--ocean-300); }
